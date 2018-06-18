@@ -1,0 +1,27 @@
+{
+  "name": "jquery.typist",
+  "version": "0.0.7",
+  "main": [
+    "dist/jquery.typist.js"
+  ],
+  "ignore": [
+    "Gruntfile.js",
+    "package.json",
+    ".jscs.json",
+    "html/"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "homepage": "https://github.com/albburtsev/jquery.typist",
+  "_release": "0.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.7",
+    "commit": "f4f429fad5bab374b1cf01da52ce4e469758afe6"
+  },
+  "_source": "https://github.com/albburtsev/jquery.typist.git",
+  "_target": "^0.0.7",
+  "_originalSource": "jquery.typist",
+  "_direct": true
+}

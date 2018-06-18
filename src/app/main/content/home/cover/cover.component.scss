@@ -1,0 +1,145 @@
+
+.home-content h3 {
+
+  color: #fff;
+  font-size: 30px;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.home-content h1.type-animate a.typewrite {
+   color: #fff;
+   font-size: 48px;
+ }
+
+.cursor {
+  animation-name: blink;
+  padding-right: 2px;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  border-right: 1px solid whitesmoke;
+}
+
+
+@keyframes blink {
+  from { border-right: 1px solid whitesmoke; }
+  to { border-right: 1px solid rgba(245, 245, 245, .0);}
+}
+
+
+/*----- Genral Classes start ------*/
+
+h1 {
+  text-align: center;
+  color: #999;
+  // background: rgba(0, 0, 0, 0.18);
+  margin: 0;
+  padding: 5px;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+/*---- Genral classes end -------*/
+
+.social-wrapper{
+  height:80px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Change icons size here*/
+.social-icons .fab {
+  font-size: 1.4em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fab {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fab{
+  border-radius: 50%;
+}
+.social-icons.icon-rounded .fab{
+  border-radius:5px;
+}
+.social-icons.icon-flat .fab{
+  border-radius: 0;
+}
+
+.social-icons .fab:hover, .social-icons .fab:active {
+  color: #FFF;
+  -webkit-box-shadow: 1px 1px 3px #333;
+  -moz-box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #333;
+}
+.social-icons.icon-zoom .fab:hover, .social-icons.icon-zoom .fab:active {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.social-icons.icon-rotate .fab:hover, .social-icons.icon-rotate .fab:active {
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+  transform: scale(1.1) rotate(360deg);
+}
+
+.social-icons .fa-adn:hover{background-color:#504e54;}
+.social-icons .fa-apple:hover{background-color:#aeb5c5;}
+.social-icons .fa-android:hover{background-color:#A5C63B;}
+.social-icons .fa-bitbucket:hover,.social-icons .fa-bitbucket-square:hover{background-color:#003366;}
+.social-icons .fa-bitcoin:hover,.social-icons .fa-btc:hover{background-color:#F7931A;}
+.social-icons .fa-css3:hover{background-color:#1572B7;}
+.social-icons .fa-dribbble:hover{background-color:#F46899;}
+.social-icons .fa-dropbox:hover{background-color:#018BD3;}
+.social-icons .fa-facebook:hover,.social-icons .fa-facebook-square:hover{background-color:#3C599F;}
+.social-icons .fa-telegram-plane:hover{background-color:#0088cc;}
+.social-icons .fa-flickr:hover{background-color:#FF0084;}
+.social-icons .fa-foursquare:hover{background-color:#0086BE;}
+.social-icons .fa-github:hover,.social-icons .fa-github-alt:hover,.social-icons .fa-github-square:hover{background-color:#070709;}
+.social-icons .fa-google-plus:hover,.social-icons .fa-google-plus-square:hover{background-color:#CF3D2E;}
+.social-icons .fa-html5:hover{background-color:#E54D26;}
+.social-icons .fa-instagram:hover{background-color:#A1755C;}
+.social-icons .fa-linkedin:hover,.social-icons .fa-linkedin-square:hover{background-color:#0085AE;}
+.social-icons .fa-linux:hover{background-color:#FBC002;color:#333;}
+.social-icons .fa-maxcdn:hover{background-color:#F6AE1C;}
+.social-icons .fa-pagelines:hover{background-color:#241E20;color:#3984EA;}
+.social-icons .fa-pinterest:hover,.social-icons .fa-pinterest-square:hover{background-color:#CC2127;}
+.social-icons .fa-renren:hover{background-color:#025DAC;}
+.social-icons .fa-skype:hover{background-color:#01AEF2;}
+.social-icons .fa-stack-exchange:hover{background-color:#245590;}
+.social-icons .fa-stack-overflow:hover{background-color:#FF7300;}
+.social-icons .fa-trello:hover{background-color:#265A7F;}
+.social-icons .fa-tumblr:hover,.social-icons .fa-tumblr-square:hover{background-color:#314E6C;}
+.social-icons .fa-twitter:hover,.social-icons .fa-twitter-square:hover{background-color:#32CCFE;}
+.social-icons .fa-vimeo-square:hover{background-color:#229ACC;}
+.social-icons .fa-vk:hover{background-color:#375474;}
+.social-icons .fa-weibo:hover{background-color:#D72B2B;}
+.social-icons .fa-windows:hover{background-color:#12B6F3;}
+.social-icons .fa-xing:hover,.social-icons .fa-xing-square:hover{background-color:#00555C;}
+.social-icons .fa-youtube:hover,.social-icons .fa-youtube-play:hover,.social-icons .fa-youtube-square:hover{background-color:#C52F30;}
+
+.cover-jarallax {
+  height: 100vh;
+}
+
