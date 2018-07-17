@@ -2,50 +2,48 @@
 
   <!-- Section heading -->
   <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-    <i class="fa fa-quote-left"></i> About me
+    <i class="{{section['icon']}}"></i> {{section['title']}}
   </h3>
 
-  <hr class="blue darken-4 width60bluefade">
+  <hr class="blackfade">
   <!-- Grid row -->
-  <div class="row">
-
+  <div class="row" align="center" style="padding-top: 3rem">
 
     <!-- Grid column -->
-    <div class="col-md-4 about-me padding-3-1 wow fadeInLeft" align="center">
+    <div class="col-5 wow fadeInLeft" style="min-width: 380px;margin:0 auto" align="center">
 
-      <img src="https://instagram.fmad3-5.fna.fbcdn.net/vp/17c280cbe46d58901b2d56e238826a9e/5BABE20A/t51.2885-15/e35/11848869_1645345199054333_719708417_n.jpg"
-           class="rounded-hard avatar width-80">
+      <img style="margin-bottom: 2rem;margin-top: 1rem;" class="rounded-hard <!--avatar--> width-80" src="{{personal_data['profile_img']}}"/>
 
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
-    <div class="col-md-8 padding-3-1 wow fadeInRight">
+    <div class="col-7 wow fadeInRight" style="margin: auto" align="left">
 
+      <div class="row" style="margin: auto;padding-bottom: 2rem;padding-left: 1rem;padding-right: 1rem;" align="left">
 
-        <p class="grey-text mx-auto mb-5">
+        <div class="col-md-12 col-lg-6 font-small" *ngFor="let i of personal_data['data_entries']"   style="display: list-item;">
+          <h6 style="display: inline;">{{i['placeholder']}}:</h6>
+          {{i['content']}}
+        </div>
 
-          <!----> "Odio a la gente que tabula con espacios. Pasión, rendimiento y minimalismo en el código y en la vida.
-          A buen programador pocas líneas bastan."<br><br>Con años de experiencia funcional en distintos lenguajes de
-          programación y frameworks, no solo en los impartidos en la facultad. Versatilidad y la facilidad para enfrentarme a cualquier proyecto, con o sin
-          las aptitudes necesarias, y la idea recurrente de optimización y rendimiento en lo que hago. Si no se algo
-          lo aprendo.
-
-          <!---->
-
-
-        </p>
-
-      <div align="center">
-        <!--Hire & download button-->
-        <button type="button" class="btn blue darken-4 sticky-bottom"><i class="fas fa-download"></i> Download resume</button>
-        <button type="button" class="btn grey darken-4 sticky-bottom"><i class="fas fa-envelope"></i> Email me</button>
       </div>
 
-    <!-- Grid column -->
+
+      <p class="grey-text mx-auto mb-3 font-small" *ngFor="let i of speech">
+        {{i['paragraph_content']}}
+      </p>
 
     </div>
+    <!-- Grid column -->
+
+  </div>
   <!-- Grid row -->
 
+  <!-- Buttons -->
+  <div class="resume-contact-buttons wow fadeInUp" style="margin: auto; padding-top: 1rem" align="center">
+    <button type="button" class="btn sticky-bottom {{i['color']}}" *ngFor="let i of buttons">
+      <i class="{{i['icon']}}"></i> {{i['text']}}
+    </button>
   </div>
 </div>

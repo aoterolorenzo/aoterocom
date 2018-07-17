@@ -3,7 +3,7 @@ define( function() {
 "use strict";
 
 /**
- * Determines whether an object can have data
+ * Determines whether an object can have personal_data
  */
 return function( owner ) {
 

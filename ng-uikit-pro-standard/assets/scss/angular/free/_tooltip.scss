@@ -1,6 +1,6 @@
 @mixin reset-text {
   font-family: $font-family-base;
-  // We deliberately do NOT reset font-size or word-wrap.
+  // We deliberately do NOT reset fonts-size or word-wrap.
   font-style: normal;
   font-weight: $font-weight-normal;
   letter-spacing: normal;
@@ -22,7 +22,7 @@
   z-index: $zindex-tooltip;
   display: block;
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
-  // So reset our font and text properties to avoid inheriting weird values.
+  // So reset our fonts and text properties to avoid inheriting weird values.
   @include reset-text();
   font-size: $font-size-sm;
   // Allow breaking very long words so they don't overflow the tooltip's bounds
@@ -119,15 +119,15 @@
  to { opacity: 1; }
 }
 
-.tooltip-fadeIn { 
+.tooltip-fadeIn {
   -webkit-animation-name: fadeInTooltip;
   animation-name: fadeInTooltip;
   -webkit-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;   
+  -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
-  -webkit-animation-fill-mode: both;    
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 

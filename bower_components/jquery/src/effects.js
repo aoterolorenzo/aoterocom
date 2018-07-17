@@ -128,11 +128,11 @@ function defaultPrefilter( elem, props, opts ) {
 			if ( value === ( hidden ? "hide" : "show" ) ) {
 
 				// Pretend to be hidden if this is a "show" and
-				// there is still data from a stopped show/hide
+				// there is still personal_data from a stopped show/hide
 				if ( value === "show" && dataShow && dataShow[ prop ] !== undefined ) {
 					hidden = true;
 
-				// Ignore all other no-op show/hide data
+				// Ignore all other no-op show/hide personal_data
 				} else {
 					continue;
 				}
@@ -156,7 +156,7 @@ function defaultPrefilter( elem, props, opts ) {
 		// the overflowX value there.
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
 
-		// Identify a display type, preferring old show/hide data over the CSS cascade
+		// Identify a display type, preferring old show/hide personal_data over the CSS cascade
 		restoreDisplay = dataShow && dataShow.display;
 		if ( restoreDisplay == null ) {
 			restoreDisplay = dataPriv.get( elem, "display" );
@@ -594,7 +594,7 @@ jQuery.fn.extend( {
 				timers = jQuery.timers,
 				length = queue ? queue.length : 0;
 
-			// Enable finishing flag on private data
+			// Enable finishing flag on private personal_data
 			data.finish = true;
 
 			// Empty the queue first

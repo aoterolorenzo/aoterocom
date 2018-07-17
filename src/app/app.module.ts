@@ -18,6 +18,8 @@ import { AboutMeComponent } from './main/content/home/about-me/about-me.componen
 import { ResumeComponent } from './main/content/home/resume/resume.component';
 import { SimpleTypewritterComponent } from './core/modules/typewritter/simple-typewritter.component';
 import { MiddleParallaxComponent } from './main/content/home/middle-parallax/middle-parallax.component';
+import { TechsComponent } from './main/content/home/techs/techs.component';
+import { SafeHtml } from './core/pipes/safeHtml.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MiddleParallaxComponent } from './main/content/home/middle-parallax/mid
     AboutMeComponent,
     ResumeComponent,
     SimpleTypewritterComponent,
-    MiddleParallaxComponent
+    MiddleParallaxComponent,
+    TechsComponent,
+    SafeHtml
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,7 @@ import { MiddleParallaxComponent } from './main/content/home/middle-parallax/mid
     MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
-      apiKey: 'Your_api_key'
+      apiKey: 'AIzaSyCodAwA7RGboaeG73PGSSe8RSFXfA6hhyQ'
     })
   ],
   providers: [MDBSpinningPreloader],
@@ -50,3 +54,5 @@ import { MiddleParallaxComponent } from './main/content/home/middle-parallax/mid
   schemas:      [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
+
+

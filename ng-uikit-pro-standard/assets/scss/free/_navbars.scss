@@ -1,6 +1,6 @@
 // Navbars
 .navbar {
-  box-shadow: $z-depth-1;
+  box-shadow: $z-depth-0;
   padding-right: 1rem !important;
   font-weight: $navbar-font-weight;
   form {
@@ -67,7 +67,7 @@
       padding: $navbar-dropdown-menu-padding;
       font-size: $navbar-dropdown-font-size;
       font-weight: $navbar-font-weight;
-      color: $black !important;
+      color: $white !important;
     }
   }
   &.navbar-light {
@@ -88,9 +88,15 @@
       &.top-nav-collapse {
         padding-top: $navbar-top-collapse-padding;
         padding-bottom: $navbar-top-collapse-padding;
-        background-color: rgba(0,0,0,.9);
-        border-bottom: 3px solid #0d47a1 !important;
+        background-color: rgba(12, 37, 75, 0.9);
+        /*
+        border-bottom: 3px solid rgba(13, 71, 161, 0.4) !important;
+        */
       }
     }
   }
+}
+
+.top-nav-collapse {
+  background-color: rgba(12, 37, 75, 0.9) !important;
 }

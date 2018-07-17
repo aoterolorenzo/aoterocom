@@ -31,7 +31,7 @@ var
 	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
-	 *    - AFTER param serialization (s.data is a string if s.processData is true)
+	 *    - AFTER param serialization (s.personal_data is a string if s.processData is true)
 	 * 3) key is the dataType
 	 * 4) the catchall symbol "*" can be used
 	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
@@ -310,7 +310,7 @@ jQuery.extend( {
 
 		/*
 		timeout: 0,
-		data: null,
+		personal_data: null,
 		dataType: null,
 		username: null,
 		password: null,
@@ -558,7 +558,7 @@ jQuery.extend( {
 			}
 		}
 
-		// Convert data if not already a string
+		// Convert personal_data if not already a string
 		if ( s.data && s.processData && typeof s.data !== "string" ) {
 			s.data = jQuery.param( s.data, s.traditional );
 		}
@@ -597,11 +597,11 @@ jQuery.extend( {
 			// Remember the hash so we can put it back
 			uncached = s.url.slice( cacheURL.length );
 
-			// If data is available and should be processed, append data to url
+			// If personal_data is available and should be processed, append personal_data to url
 			if ( s.data && ( s.processData || typeof s.data === "string" ) ) {
 				cacheURL += ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data;
 
-				// #9682: remove data so that it's not used in an eventual retry
+				// #9682: remove personal_data so that it's not used in an eventual retry
 				delete s.data;
 			}
 
@@ -630,7 +630,7 @@ jQuery.extend( {
 			}
 		}
 
-		// Set the correct header, if data is being sent
+		// Set the correct header, if personal_data is being sent
 		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
 			jqXHR.setRequestHeader( "Content-Type", s.contentType );
 		}
@@ -736,7 +736,7 @@ jQuery.extend( {
 			// Determine if successful
 			isSuccess = status >= 200 && status < 300 || status === 304;
 
-			// Get response data
+			// Get response personal_data
 			if ( responses ) {
 				response = ajaxHandleResponses( s, jqXHR, responses );
 			}
@@ -767,7 +767,7 @@ jQuery.extend( {
 				} else if ( status === 304 ) {
 					statusText = "notmodified";
 
-				// If we have data, let's convert it
+				// If we have personal_data, let's convert it
 				} else {
 					statusText = response.state;
 					success = response.data;
@@ -786,7 +786,7 @@ jQuery.extend( {
 				}
 			}
 
-			// Set data for the fake xhr object
+			// Set personal_data for the fake xhr object
 			jqXHR.status = status;
 			jqXHR.statusText = ( nativeStatusText || statusText ) + "";
 
@@ -834,7 +834,7 @@ jQuery.extend( {
 jQuery.each( [ "get", "post" ], function( i, method ) {
 	jQuery[ method ] = function( url, data, callback, type ) {
 
-		// Shift arguments if data argument was omitted
+		// Shift arguments if personal_data argument was omitted
 		if ( isFunction( data ) ) {
 			type = type || callback;
 			callback = data;

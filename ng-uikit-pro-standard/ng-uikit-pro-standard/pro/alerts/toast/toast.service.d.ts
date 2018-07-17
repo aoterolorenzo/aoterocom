@@ -55,7 +55,7 @@ export declare class ToastService {
      */
     private _findToast(toastId);
     /**
-     * Creates and attaches toast data to component
+     * Creates and attaches toast personal_data to component
      * returns null if toast is duplicate and preventDuplicates == True
      */
     private _buildNotification(toastType, message, title, config);

@@ -13,12 +13,21 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
 }
 
+.blue.darken-ao {
+  background-color: #284c84 !important;
+}
 
-hr.width60bluefade {
+
+hr.blackfade {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  width: 60%;
+}
+
+hr.whitefade {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
 }
 
 hr.margin-bottom {
@@ -34,7 +43,7 @@ hr.margin-bottom {
 }
 
 .ao-border-bottom{
-  border-bottom: 3px solid #0d47a1;
+  /*border-bottom: 4px solid #0d47a1;*/
 }
 
 .stepper li .square {
@@ -64,9 +73,95 @@ hr.middle-banner{
 }
 
 .rounded-hard {
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 .width-80{
   width: 80%;
 }
+
+.md-form label{
+  color: whitesmoke;
+
+}
+
+input {
+  color: whitesmoke !important;
+}
+
+textarea {
+  color: whitesmoke !important;
+}
+
+textarea.md-textarea-scroll{
+  overflow-y: visible;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ced4da !important;
+  resize: none;
+
+}
+
+label {
+  color: whitesmoke !important;
+}
+
+.counter-success {
+  border-bottom: 1px solid #65a374 !important;
+  box-shadow: 0 1px 0 0 #65a374 !important;
+}
+
+.counter-danger {
+  border-bottom: 1px solid #a35d5a !important;
+  box-shadow: 0 1px 0 0 #a35d5a !important;
+}
+
+.text-success {
+  color: #65a374 !important;
+}
+
+.text-danger {
+  color: #a35d5a !important;
+}
+
+.contact-info {
+  padding-left: 0;
+  list-style: none;
+  :last-child{
+    margin-bottom: 0;
+  }
+}
+.contact-info>li {
+  margin-bottom: 42px;
+}
+.no-margin{
+  margin: 0 !important;
+}
+.no-padding{
+  padding: 0 !important;
+}
+
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16), 0 1px 15px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.top-nav-collapse {
+  .dropdown-menu {
+    margin-top:0;
+    background-color: rgba(12, 37, 75, 0.9) !important;
+  }
+  .dropdown-item {
+    :hover {
+      background-color: rgba(12, 32, 65, 0.9) !important;
+    }
+  }
+}
+
+
+

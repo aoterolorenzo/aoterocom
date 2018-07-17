@@ -42,10 +42,10 @@ function on( elem, types, selector, data, fn, one ) {
 	// Types can be a map of types/handlers
 	if ( typeof types === "object" ) {
 
-		// ( types-Object, selector, data )
+		// ( types-Object, selector, personal_data )
 		if ( typeof selector !== "string" ) {
 
-			// ( types-Object, data )
+			// ( types-Object, personal_data )
 			data = data || selector;
 			selector = undefined;
 		}
@@ -68,7 +68,7 @@ function on( elem, types, selector, data, fn, one ) {
 			data = undefined;
 		} else {
 
-			// ( types, data, fn )
+			// ( types, personal_data, fn )
 			fn = data;
 			data = selector;
 			selector = undefined;
@@ -117,7 +117,7 @@ jQuery.event = {
 			return;
 		}
 
-		// Caller can pass in an object of custom data in lieu of the handler
+		// Caller can pass in an object of custom personal_data in lieu of the handler
 		if ( handler.handler ) {
 			handleObjIn = handler;
 			handler = handleObjIn.handler;
@@ -287,7 +287,7 @@ jQuery.event = {
 			}
 		}
 
-		// Remove data and the expando if it's no longer used
+		// Remove personal_data and the expando if it's no longer used
 		if ( jQuery.isEmptyObject( events ) ) {
 			dataPriv.remove( elem, "handle events" );
 		}

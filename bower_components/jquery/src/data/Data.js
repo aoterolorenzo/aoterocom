@@ -24,7 +24,7 @@ Data.prototype = {
 		if ( !value ) {
 			value = {};
 
-			// We can accept data for non-element nodes in modern browsers,
+			// We can accept personal_data for non-element nodes in modern browsers,
 			// but we should not, see #8335.
 			// Always return an empty object.
 			if ( acceptData( owner ) ) {
@@ -36,7 +36,7 @@ Data.prototype = {
 
 				// Otherwise secure it in a non-enumerable property
 				// configurable must be true to allow the property to be
-				// deleted when data is removed
+				// deleted when personal_data is removed
 				} else {
 					Object.defineProperty( owner, this.expando, {
 						value: value,
@@ -85,7 +85,7 @@ Data.prototype = {
 		// which value to return, respectively either:
 		//
 		//   1. The entire cache object
-		//   2. The data stored at the key
+		//   2. The personal_data stored at the key
 		//
 		if ( key === undefined ||
 				( ( key && typeof key === "string" ) && value === undefined ) ) {
@@ -102,7 +102,7 @@ Data.prototype = {
 		this.set( owner, key, value );
 
 		// Since the "set" path can have two possible entry points
-		// return the expected data based on which path was taken[*]
+		// return the expected personal_data based on which path was taken[*]
 		return value !== undefined ? value : key;
 	},
 	remove: function( owner, key ) {
@@ -138,7 +138,7 @@ Data.prototype = {
 			}
 		}
 
-		// Remove the expando if there's no more data
+		// Remove the expando if there's no more personal_data
 		if ( key === undefined || jQuery.isEmptyObject( cache ) ) {
 
 			// Support: Chrome <=35 - 45

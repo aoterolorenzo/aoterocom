@@ -1,18 +1,57 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-  <logo>
-    <a class="navbar-brand" href="#">Navbar</a>
-  </logo>
+  <!--<logo>
+    <a class="navbar-brand" href="#">aotero.com</a>
+  </logo>-->
   <links>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown active" dropdown>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Resume<span class="caret"></span><span class="sr-only">(current)</span></a>
+          <hr class="whitefade">
+          <div *dropdownMenu class="dropdown-menu dropdown" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="90" href="#cover">Home</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="90" href="#about-me">About me</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="65" href="#resume">Education and Skills</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="90" href="#techs">Technologies</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect  href="#footer" [pageScrollDuration]="800" mdbPageScroll>Get in touch</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#footer" mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="90">How I manage</a>
+          <hr class="whitefade no-margin no-padding">
+          <div _ngcontent-c1="" style="
+              color:  white;
+              font-size:  7px;
+              position: initial;
+              margin-top: -32px;
+              margin-left: 118px;
+              padding: 2px;
+              background: rgba(255,0,0,0.2);
+              width: 20px;
+              border-radius:  4px;
+              z-index: 12;
+              /* display:  inline; */
+          ">Soon</div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="#">Blog</a>
+          <hr class="whitefade no-margin no-padding">
+          <div _ngcontent-c1="" style="
+              color:  white;
+              font-size:  7px;
+              position: initial;
+              margin-top: -32px;
+              margin-left: 35px;
+              padding: 2px;
+              background: rgba(255,0,0,0.2);
+              width: 20px;
+              border-radius:  4px;
+              z-index: 12;
+              /* display:  inline; */
+          ">Soon</div>
         </li>
       </ul>
     </div>

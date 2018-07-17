@@ -1,5 +1,119 @@
-<div id="particles-js" class="container" style="
-      height: 600px;
-    background-color: rgba(100,0,0,0.5);" ></div>
+<section id="footer">
+  <div class="container white-text" style="padding-top: 3rem">
+    <!--Section heading-->
+    <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown ">
+      <i class="far fa-envelope" aria-hidden="true"></i> Get in touch
+    </h2>
+
+    <hr class="whitefade">
+    <div class="row">
+
+      <div class="col-md-8 col-lg-5 padding-3-1">
+        <div id="map-container-7" class="z-depth-1-half map-container" style="height: 300px;">
+          <agm-map [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom" [styles]="map.styles" style="height: 300px;">
+            <!--<agm-marker [latitude]="map.marker.lat" [longitude]="map.marker.lng"></agm-marker>-->
+          </agm-map>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-2 padding-3-1" align="center">
+        <ul class="contact-info" style="margin-bottom: 0;">
+          <li>
+            <i class="{{contact_icons[0]['icon-class']}}"></i>
+            <p>{{contact_icons[0]['text']}}</p>
+          </li>
+
+          <li>
+            <i class="{{contact_icons[1]['icon-class']}}"></i>
+            <p>{{contact_icons[1]['text']}}</p>
+          </li>
+
+          <li>
+            <i class="{{contact_icons[2]['icon-class']}}"></i>
+            <p>{{contact_icons[2]['text']}}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-12 col-lg-5 padding-3-1">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <div class="md-form" style="margin-top: 0">
+              <input type="text" id="form-contact-name" [mdbValidate]="false" class="form-control" mdbInputDirective>
+              <label for="form-contact-name" class="">{{form_placeholders['name']}}</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <div class="md-form" style="margin-top: 0">
+              <input type="email" id="form-contact-email" class="form-control" mdbInputDirective>
+              <label for="form-contact-email" class="">{{form_placeholders['email']}}</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <input type="text" id="form-contact-phone" [mdbValidate]="false" class="form-control" mdbInputDirective>
+              <label for="form-contact-phone" class="">{{form_placeholders['phone']}}</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <input type="text" id="form-contact-company" [mdbValidate]="false" class="form-control" mdbInputDirective>
+              <label for="form-contact-company" class="">{{form_placeholders['company']}}</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-12">
+            <div class="md-form mb-0">
+              <textarea type="text" id="form-contact-message" [mdbValidate]="false" class="form-control md-textarea-scroll"
+                        mdbInputDirective rows="3" style="width: 80%;height: 142px;"></textarea>
+              <label for="form-contact-message" id="form-contact-message-label">{{form_placeholders['message']}}</label>
+              <a class="btn-floating btn-lg blue darken-ao float-right" style="bottom:90px">
+                <i class="fa fa-send-o"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="license">
+  <div class="container" align="center">
+    <i><i class="far fa-copyright"></i> {{license_msg}}</i>
+  </div>
+</section>
+
 
 

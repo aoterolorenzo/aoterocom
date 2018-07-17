@@ -355,7 +355,7 @@ jQuery.extend( {
 			// count of unprocessed arguments
 			i = remaining,
 
-			// subordinate fulfillment data
+			// subordinate fulfillment personal_data
 			resolveContexts = Array( i ),
 			resolveValues = slice.call( arguments ),
 

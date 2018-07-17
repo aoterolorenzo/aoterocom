@@ -8,13 +8,231 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public map: any = {
+    lat: 43.367139, // 43.367139, -8.408852
+    lng: -8.408852,
+    zoom: 14,
+    styles:
+      [
+        {
+          'featureType': 'all',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'hue': '#ff4400'
+            },
+            {
+              'saturation': -68
+            },
+            {
+              'lightness': -4
+            },
+            {
+              'gamma': 0.72
+            }
+          ]
+        },
+        {
+          'featureType': 'administrative.locality',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#111b2a'
+            }
+          ]
+        },
+        {
+          'featureType': 'landscape.man_made',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'hue': '#0077ff'
+            },
+            {
+              'gamma': 3.1
+            }
+          ]
+        },
+        {
+          'featureType': 'poi',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#a16942'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi',
+          'elementType': 'labels.text.stroke',
+          'stylers': [
+            {
+              'lightness': '-27'
+            },
+            {
+              'weight': '0.01'
+            },
+            {
+              'color': '#ffffff'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi',
+          'elementType': 'labels.icon',
+          'stylers': [
+            {
+              'visibility': 'simplified'
+            },
+            {
+              'hue': '#ff9200'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi.park',
+          'elementType': 'all',
+          'stylers': [
+            {
+              'hue': '#44ff00'
+            },
+            {
+              'saturation': -23
+            }
+          ]
+        },
+        {
+          'featureType': 'transit',
+          'elementType': 'labels.text.stroke',
+          'stylers': [
+            {
+              'saturation': -64
+            },
+            {
+              'hue': '#ff9100'
+            },
+            {
+              'lightness': 16
+            },
+            {
+              'gamma': 0.47
+            },
+            {
+              'weight': 2.7
+            }
+          ]
+        },
+        {
+          'featureType': 'transit.line',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'lightness': -48
+            },
+            {
+              'hue': '#ff5e00'
+            },
+            {
+              'gamma': 1.2
+            },
+            {
+              'saturation': -23
+            }
+          ]
+        },
+        {
+          'featureType': 'water',
+          'elementType': 'all',
+          'stylers': [
+            {
+              'gamma': 0.44
+            },
+            {
+              'saturation': -33
+            },
+            {
+              'color': '#2a4369'
+            }
+          ]
+        },
+        {
+          'featureType': 'water',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'hue': '#007fff'
+            },
+            {
+              'gamma': 0.77
+            },
+            {
+              'saturation': 65
+            },
+            {
+              'lightness': 99
+            }
+          ]
+        },
+        {
+          'featureType': 'water',
+          'elementType': 'labels.text.stroke',
+          'stylers': [
+            {
+              'gamma': 0.11
+            },
+            {
+              'weight': 5.6
+            },
+            {
+              'saturation': 99
+            },
+            {
+              'hue': '#0091ff'
+            },
+            {
+              'lightness': -86
+            }
+          ]
+        }
+      ],
+    marker: {
+      lat: 43.361230,
+      lng: -8.419875,
+    }
+  };
+
+  contact_icons = [
+    {
+      'icon-class': 'fas fa-map-marker fa-2x',
+      'text': 'A Coruña, ES'
+    },
+    {
+      'icon-class': 'fab fa-telegram-plane fa-2x mt-4',
+      'text': 'aoterocom'
+    },
+    {
+      'icon-class': 'far fa-envelope fa-2x mt-4',
+      'text': 'contact@aotero.com'
+    }
+  ];
+
+  form_placeholders = {
+    'name': 'Your name',
+    'email': 'Your email',
+    'phone': 'Your phone',
+    'company': 'Your company',
+    'message': 'Your message'
+  };
+
+  license_msg = 'Copyright 2018 All rights reserved. Designed and developed by Alberto Otero';
+
+
+
+
   constructor() { }
-
   ngOnInit() {
-
-
-
 
   }
 
 }
+

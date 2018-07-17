@@ -1132,7 +1132,7 @@ class ToastService {
         return null;
     }
     /**
-     * Creates and attaches toast data to component
+     * Creates and attaches toast personal_data to component
      * returns null if toast is duplicate and preventDuplicates == True
      * @param {?} toastType
      * @param {?} message
@@ -1886,7 +1886,7 @@ class CompleterService {
      * @param {?} localDataFactory
      * @param {?} remoteDataFactory
      */
-    constructor(localDataFactory, 
+    constructor(localDataFactory,
     // Using any instead of () => LocalData because on AoT errors
     remoteDataFactory // Using any instead of () => LocalData because on AoT errors
     ) {
@@ -4656,7 +4656,7 @@ MDBDatePickerComponent.decorators = [
     { type: Component, args: [{
                 selector: 'mdb-date-picker',
                 exportAs: 'mdbdatepicker',
-                template: "<!-- Line 27: Deleted (focus)=\"onFocusInput($event)\" for better use in Firefox. If other strange problems will occur, please paste it in line 27. --> <div class=\"mydp picker\" [ngClass]=\"{'picker--opened': showSelector}\" [ngStyle]=\"{'width': opts.width}\"> <div class=\"md-form\"> <label *ngIf=\"label.length > 0\"  [ngClass]=\"{ 'active': checkActive(), 'disabled': opts.componentDisabled }\">{{ label }}</label> <input  type=\"text\"  class=\"form-control mydp-date\"  [attr.aria-label]=\"opts.ariaLabelInputField\"  (click)=\"openBtnClicked()\"  [attr.maxlength]=\"opts.dateFormat.length\"  [ngClass]=\"{ 'selectiondisabled': opts.componentDisabled, 'disabled': opts.componentDisabled }\" placeholder=\"{{ placeholder }}\"  [ngModel]=\"selectionDayTxt\"  (ngModelChange)=\"onUserDateInput($event)\"  [value]=\"selectionDayTxt\"  [ngStyle]=\"{ 'height': opts.height,  'font-size': opts.selectionTxtFontSize }\" (blur)=\"onBlurInput($event)\"  [disabled]=\"opts.componentDisabled\"  autocomplete=\"off\"> </div> <div class=\"selector picker__holder selectorarrow selectorarrowleft selectorarrowright\" #divFocus [ngClass]=\"{'alignselectorright': opts.alignSelectorRight}\" tabindex=\"0\"> <div class=\"picker__frame picker__box\"> <div class=\"picker__header\"> <div class=\"picker__date-display\"> <div class=\"picker__weekday-display\"> {{ weekText(getWeekday(tmp)) }} </div> <div class=\"picker__month-display\"> <div>{{ monthText(tmp.month) }}</div> </div> <div class=\"picker__day-display\"> <div>{{ tmp.day }}</div> </div> <div class=\"picker__year-display\"> <div>{{ tmp.year }}</div> </div> </div> <select class=\"picker__select--year\" [(ngModel)]=\"visibleMonth.year\" (ngModelChange)=\"onUserYearInput($event)\" role=\"menu\" aria-label=\"Year selector\"> <option *ngFor=\"let year of years\" [value]=\"year\">{{ year }}</option> </select> <select class=\"picker__select--month\" [(ngModel)]=\"visibleMonth.monthTxt\" (ngModelChange)=\"onUserMonthInput($event)\" role=\"menu\" aria-label=\"Month selector\"> <option *ngFor=\"let month of months\" [value]=\"month.short\">{{ month.label }}</option> </select> <button class=\"picker__nav--prev\" data-nav=\"-1\" type=\"button\" aria-controls=\"date-picker-example_table\" title=\"Previous month\" (click)=\"prevMonth()\" [disabled]=\"prevMonthDisabled\" [ngClass]=\"{'headerbtnenabled': !prevMonthDisabled, 'headerbtndisabled': prevMonthDisabled}\"></button> <button class=\"picker__nav--next\" data-nav=\"1\" type=\"button\" aria-controls=\"date-picker-example_table\" title=\"Next month\" (click)=\"nextMonth()\" [disabled]=\"nextMonthDisabled\" [ngClass]=\"{'headerbtnenabled': !nextMonthDisabled, 'headerbtndisabled': nextMonthDisabled}\"></button> </div> <table class=\"picker__table\"> <thead><tr><th class=\"picker__weekday weekdaytitleweeknbr\" *ngIf=\"opts.showWeekNumbers&&opts.firstDayOfWeek==='mo'\">#</th><th class=\"picker__weekday\" scope=\"col\" *ngFor=\"let d of weekDays\">{{d}}</th></tr></thead> <tbody> <tr *ngFor=\"let w of dates\"> <td class=\"picker__day daycellweeknbr\" *ngIf=\"opts.showWeekNumbers&&opts.firstDayOfWeek==='mo'\">{{w.weekNbr}}</td> <td class=\"picker__day\" *ngFor=\"let d of w.week\" [ngClass]=\"{'picker__day--infocus':d.cmo===currMonthId&&!d.disabled, 'disabled': d.disabled, 'tablesingleday': d.cmo===currMonthId&&!d.disabled}\"> <div *ngIf=\"d.markedDate.marked\" class=\"markdate\" [ngStyle]=\"{'background-color': d.markedDate.color}\"></div> <div class=\"picker__day\" [ngClass]=\"{'picker__day--infocus':d.cmo===currMonthId,'picker__day--outfocus': (d.cmo===nextMonthId || d.cmo===prevMonthId), 'picker__day--today':d.currDay&&opts.markCurrentDay, 'picker__day--selected picker__day--highlighted':selectedDate.day===d.dateObj.day && selectedDate.month===d.dateObj.month && selectedDate.year===d.dateObj.year && d.cmo===currMonthId}\" (click)=\"!d.disabled&&cellClicked(d);$event.stopPropagation()\" (keydown)=\"cellKeyDown($event, d)\" tabindex=\"0\"> {{d.dateObj.day}} </div> </td> </tr> </tbody> </table> <div class=\"picker__footer\"> <button type=\"button\"  *ngIf=\"opts.showTodayBtn\"  class=\"picker__button--today\" (click)=\"todayClicked()\" role=\"button\" [attr.aria-label]=\"opts.todayBtnTxt\"> {{opts.todayBtnTxt}} </button> <button type=\"button\" *ngIf=\"opts.showClearDateBtn\" class=\"picker__button--clear\" (click)=\"removeBtnClicked()\" role=\"button\" [attr.aria-label]=\"opts.clearBtnTxt\"> {{opts.clearBtnTxt}} </button> <button type=\"button\" [ngClass]=\"{'ml-auto': !opts.showTodayBtn}\" class=\"picker__button--close\" (click)=\"showSelector = false; removeInlineStyle();\" role=\"button\" [attr.aria-label]=\"opts.closeBtnTxt\"> {{opts.closeBtnTxt}} </button> </div> </div> </div> </div> ",
+                template: "<!-- Line 27: Deleted (focus)=\"onFocusInput($event)\" for better use in Firefox. If other strange problems will occur, please paste it in line 27. --> <div class=\"mydp picker\" [ngClass]=\"{'picker--opened': showSelector}\" [ngStyle]=\"{'width': opts.width}\"> <div class=\"md-form\"> <label *ngIf=\"label.length > 0\"  [ngClass]=\"{ 'active': checkActive(), 'disabled': opts.componentDisabled }\">{{ label }}</label> <input  type=\"text\"  class=\"form-control mydp-date\"  [attr.aria-label]=\"opts.ariaLabelInputField\"  (click)=\"openBtnClicked()\"  [attr.maxlength]=\"opts.dateFormat.length\"  [ngClass]=\"{ 'selectiondisabled': opts.componentDisabled, 'disabled': opts.componentDisabled }\" placeholder=\"{{ placeholder }}\"  [ngModel]=\"selectionDayTxt\"  (ngModelChange)=\"onUserDateInput($event)\"  [value]=\"selectionDayTxt\"  [ngStyle]=\"{ 'height': opts.height,  'fonts-size': opts.selectionTxtFontSize }\" (blur)=\"onBlurInput($event)\"  [disabled]=\"opts.componentDisabled\"  autocomplete=\"off\"> </div> <div class=\"selector picker__holder selectorarrow selectorarrowleft selectorarrowright\" #divFocus [ngClass]=\"{'alignselectorright': opts.alignSelectorRight}\" tabindex=\"0\"> <div class=\"picker__frame picker__box\"> <div class=\"picker__header\"> <div class=\"picker__date-display\"> <div class=\"picker__weekday-display\"> {{ weekText(getWeekday(tmp)) }} </div> <div class=\"picker__month-display\"> <div>{{ monthText(tmp.month) }}</div> </div> <div class=\"picker__day-display\"> <div>{{ tmp.day }}</div> </div> <div class=\"picker__year-display\"> <div>{{ tmp.year }}</div> </div> </div> <select class=\"picker__select--year\" [(ngModel)]=\"visibleMonth.year\" (ngModelChange)=\"onUserYearInput($event)\" role=\"menu\" aria-label=\"Year selector\"> <option *ngFor=\"let year of years\" [value]=\"year\">{{ year }}</option> </select> <select class=\"picker__select--month\" [(ngModel)]=\"visibleMonth.monthTxt\" (ngModelChange)=\"onUserMonthInput($event)\" role=\"menu\" aria-label=\"Month selector\"> <option *ngFor=\"let month of months\" [value]=\"month.short\">{{ month.label }}</option> </select> <button class=\"picker__nav--prev\" personal_data-nav=\"-1\" type=\"button\" aria-controls=\"date-picker-example_table\" title=\"Previous month\" (click)=\"prevMonth()\" [disabled]=\"prevMonthDisabled\" [ngClass]=\"{'headerbtnenabled': !prevMonthDisabled, 'headerbtndisabled': prevMonthDisabled}\"></button> <button class=\"picker__nav--next\" personal_data-nav=\"1\" type=\"button\" aria-controls=\"date-picker-example_table\" title=\"Next month\" (click)=\"nextMonth()\" [disabled]=\"nextMonthDisabled\" [ngClass]=\"{'headerbtnenabled': !nextMonthDisabled, 'headerbtndisabled': nextMonthDisabled}\"></button> </div> <table class=\"picker__table\"> <thead><tr><th class=\"picker__weekday weekdaytitleweeknbr\" *ngIf=\"opts.showWeekNumbers&&opts.firstDayOfWeek==='mo'\">#</th><th class=\"picker__weekday\" scope=\"col\" *ngFor=\"let d of weekDays\">{{d}}</th></tr></thead> <tbody> <tr *ngFor=\"let w of dates\"> <td class=\"picker__day daycellweeknbr\" *ngIf=\"opts.showWeekNumbers&&opts.firstDayOfWeek==='mo'\">{{w.weekNbr}}</td> <td class=\"picker__day\" *ngFor=\"let d of w.week\" [ngClass]=\"{'picker__day--infocus':d.cmo===currMonthId&&!d.disabled, 'disabled': d.disabled, 'tablesingleday': d.cmo===currMonthId&&!d.disabled}\"> <div *ngIf=\"d.markedDate.marked\" class=\"markdate\" [ngStyle]=\"{'background-color': d.markedDate.color}\"></div> <div class=\"picker__day\" [ngClass]=\"{'picker__day--infocus':d.cmo===currMonthId,'picker__day--outfocus': (d.cmo===nextMonthId || d.cmo===prevMonthId), 'picker__day--today':d.currDay&&opts.markCurrentDay, 'picker__day--selected picker__day--highlighted':selectedDate.day===d.dateObj.day && selectedDate.month===d.dateObj.month && selectedDate.year===d.dateObj.year && d.cmo===currMonthId}\" (click)=\"!d.disabled&&cellClicked(d);$event.stopPropagation()\" (keydown)=\"cellKeyDown($event, d)\" tabindex=\"0\"> {{d.dateObj.day}} </div> </td> </tr> </tbody> </table> <div class=\"picker__footer\"> <button type=\"button\"  *ngIf=\"opts.showTodayBtn\"  class=\"picker__button--today\" (click)=\"todayClicked()\" role=\"button\" [attr.aria-label]=\"opts.todayBtnTxt\"> {{opts.todayBtnTxt}} </button> <button type=\"button\" *ngIf=\"opts.showClearDateBtn\" class=\"picker__button--clear\" (click)=\"removeBtnClicked()\" role=\"button\" [attr.aria-label]=\"opts.clearBtnTxt\"> {{opts.clearBtnTxt}} </button> <button type=\"button\" [ngClass]=\"{'ml-auto': !opts.showTodayBtn}\" class=\"picker__button--close\" (click)=\"showSelector = false; removeInlineStyle();\" role=\"button\" [attr.aria-label]=\"opts.closeBtnTxt\"> {{opts.closeBtnTxt}} </button> </div> </div> </div> </div> ",
                 providers: [LocaleService, UtilService, MYDP_VALUE_ACCESSOR],
                 encapsulation: ViewEncapsulation.None
             },] },
@@ -4945,15 +4945,15 @@ class MDBUploaderService {
                 case 'uploadAll':
                     // Lines 118, 121 and 129 commented due to ts comipilator check “noUnusedLocals”: true, “noUnusedParameters”: true,
                     // const concurrency = event.concurrency > 0 ? event.concurrency : Number.POSITIVE_INFINITY;
-                    // const subscriber = Subscriber.create((data: UploadOutput) => {
-                    //   this.serviceEvents.emit(data);
+                    // const subscriber = Subscriber.create((personal_data: UploadOutput) => {
+                    //   this.serviceEvents.emit(personal_data);
                     // });
                     this.uploads = this.uploads.concat(this.files.map((file) => {
                         return { file: file, sub: this.setToNullValue };
                     }));
                     // const subscription = Observable.from(this.files.map(file => this.uploadFile(file, event)))
                     //   .mergeAll(concurrency)
-                    //   .combineLatest(data => data)
+                    //   .combineLatest(personal_data => personal_data)
                     //   .subscribe(subscriber);
                     break;
                 case 'cancel':
@@ -9008,7 +9008,7 @@ class PageScrollService {
         const /** @type {?} */ tooShortInterval = pageScrollInstance.executionDuration <= PageScrollConfig._interval;
         if (allReadyAtDestination || tooShortInterval) {
             if (isDevMode()) {
-                
+
             }
             pageScrollInstance.setScrollPosition(pageScrollInstance.targetScrollPosition);
             pageScrollInstance.fireEvent(true);
@@ -9785,7 +9785,7 @@ function computedStyle(element, styleProp) {
     // W3C standard way:
     if (defaultView && defaultView.getComputedStyle) {
         // sanitize property name to css notation
-        // (hypen separated words eg. font-Size)
+        // (hypen separated words eg. fonts-Size)
         styleProp = styleProp.replace(/([A-Z])/g, '-$1').toLowerCase();
         return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
     }
@@ -10418,7 +10418,7 @@ class TabDirective {
         else if (!this.hasClass(el, className)) {
             el.className += ' ' + className;
         }
-        
+
     }
     /**
      * @param {?} el
@@ -11085,7 +11085,7 @@ class ClockPickerComponent {
 ClockPickerComponent.decorators = [
     { type: Component, args: [{
                 selector: 'mdb-time-picker',
-                template: "<div> <div class=\"md-form\"> <label class=\"active\">{{ label }}</label> <input [placeholder]=\"placeholder\" [value]=\"endHours\" type=\"text\" class=\"form-control timepicker\" (click)=\"openBtnClicked()\" [(ngModel)]=\"endHours\"> </div> <div class=\"clockpicker picker\" [hidden]=\"!showClock\" [ngClass]=\"{'picker--opened': showClock, 'darktheme': darktheme}\"> <div class=\"picker__holder\"> <div class=\"picker__frame\"> <div class=\"picker__wrap\"> <div class=\"picker__box\"> <div class=\"picker__date-display\"> <div class=\"clockpicker-display\"> <div class=\"clockpicker-display-column\"> <span class=\"clockpicker-span-hours text-primary\" [ngClass]=\"{'text-primary': showHours}\" (click)=\"showHoursClock()\"> {{ selectedHours.h }}</span>:<span class=\"clockpicker-span-minutes\" [ngClass]=\"{'text-primary': !showHours}\" (click)=\"showMinutesClock()\">{{selectedHours.m }}</span> </div> <div class=\"clockpicker-display-column clockpicker-display-am-pm\" *ngIf=\"twelvehour\"> <div class=\"clockpicker-span-am-pm\">{{ selectedHours.ampm }}</div> </div> </div> </div> <div class=\"picker__calendar-container\"> <div class=\"clockpicker-plate\" #plate> <div class=\"clockpicker-canvas\"> <svg class=\"clockpicker-svg\" width=\"270\" height=\"270\" #svg> <g transform=\"translate(135,135)\" #g> <line x1=\"0\" y1=\"0\" x2=\"77.94228634059948\" y2=\"-45.00000000000001\" #hand></line> <circle class=\"clockpicker-canvas-fg\" r=\"5\" cx=\"95.26279441628824\" cy=\"-55.000000000000014\" #fg></circle> <circle class=\"clockpicker-canvas-bg\" r=\"20\" cx=\"95.26279441628824\" cy=\"-55.000000000000014\" #bg></circle> <circle class=\"clockpicker-canvas-bearing\" cx=\"0\" cy=\"0\" r=\"2\" #bearing></circle> </g> </svg> </div> <div class=\"clockpicker-dial clockpicker-hours\" #hoursPlate [ngClass]=\"{'clockpicker-dial-out': !showHours}\" [ngStyle]=\"{'visibility': !showHours ? 'hidden' : 'visible'}\"> <div *ngFor=\"let tick of hoursTicks\" class=\"clockpicker-tick\" style=\"font-size: 140%;\" [ngStyle]=\"{'left': tick.left+'px', 'top': tick.top+'px'}\" id=\"{{ tick.hour }}\"> {{ tick.hour }} </div> </div> <div class=\"clockpicker-dial clockpicker-minutes\" #minutesPlate [ngClass]=\"{'clockpicker-dial-out': showHours}\" [ngStyle]=\"{'visibility': showHours ? 'hidden' : 'visible'}\"> <div *ngFor=\"let tick of minutesTicks\" class=\"clockpicker-tick\" style=\"font-size: 120%;\" [ngStyle]=\"{'left': tick.left+'px', 'top': tick.top+'px'}\"> {{ tick.min }} </div> </div> </div> <div class=\"clockpicker-am-pm-block\" *ngIf=\"twelvehour\"> <button type=\"button\" class=\"btn-floating btn-flat clockpicker-button am-button\" [ngClass]=\"{'active': selectedHours.ampm=='AM'}\" (click)=\"setAmPm('AM')\"> AM </button> <button type=\"button\" class=\"btn-floating btn-flat clockpicker-button pm-button\" [ngClass]=\"{'active': selectedHours.ampm=='PM'}\" (click)=\"setAmPm('PM')\"> PM </button> </div> </div> <div class=\"picker__footer\"> <button type=\"button\" *ngIf=\"buttonLabel\" class=\"btn-flat clockpicker-button\" (click)=\"closeBtnClicked()\"> {{buttonLabel}} </button> <button type=\"button\" *ngIf=\"!buttonLabel\" class=\"btn-flat clockpicker-button\" (click)=\"closeBtnClicked()\"> Done </button> </div> </div> </div> </div> </div> </div> </div>",
+                template: "<div> <div class=\"md-form\"> <label class=\"active\">{{ label }}</label> <input [placeholder]=\"placeholder\" [value]=\"endHours\" type=\"text\" class=\"form-control timepicker\" (click)=\"openBtnClicked()\" [(ngModel)]=\"endHours\"> </div> <div class=\"clockpicker picker\" [hidden]=\"!showClock\" [ngClass]=\"{'picker--opened': showClock, 'darktheme': darktheme}\"> <div class=\"picker__holder\"> <div class=\"picker__frame\"> <div class=\"picker__wrap\"> <div class=\"picker__box\"> <div class=\"picker__date-display\"> <div class=\"clockpicker-display\"> <div class=\"clockpicker-display-column\"> <span class=\"clockpicker-span-hours text-primary\" [ngClass]=\"{'text-primary': showHours}\" (click)=\"showHoursClock()\"> {{ selectedHours.h }}</span>:<span class=\"clockpicker-span-minutes\" [ngClass]=\"{'text-primary': !showHours}\" (click)=\"showMinutesClock()\">{{selectedHours.m }}</span> </div> <div class=\"clockpicker-display-column clockpicker-display-am-pm\" *ngIf=\"twelvehour\"> <div class=\"clockpicker-span-am-pm\">{{ selectedHours.ampm }}</div> </div> </div> </div> <div class=\"picker__calendar-container\"> <div class=\"clockpicker-plate\" #plate> <div class=\"clockpicker-canvas\"> <svg class=\"clockpicker-svg\" width=\"270\" height=\"270\" #svg> <g transform=\"translate(135,135)\" #g> <line x1=\"0\" y1=\"0\" x2=\"77.94228634059948\" y2=\"-45.00000000000001\" #hand></line> <circle class=\"clockpicker-canvas-fg\" r=\"5\" cx=\"95.26279441628824\" cy=\"-55.000000000000014\" #fg></circle> <circle class=\"clockpicker-canvas-bg\" r=\"20\" cx=\"95.26279441628824\" cy=\"-55.000000000000014\" #bg></circle> <circle class=\"clockpicker-canvas-bearing\" cx=\"0\" cy=\"0\" r=\"2\" #bearing></circle> </g> </svg> </div> <div class=\"clockpicker-dial clockpicker-hours\" #hoursPlate [ngClass]=\"{'clockpicker-dial-out': !showHours}\" [ngStyle]=\"{'visibility': !showHours ? 'hidden' : 'visible'}\"> <div *ngFor=\"let tick of hoursTicks\" class=\"clockpicker-tick\" style=\"fonts-size: 140%;\" [ngStyle]=\"{'left': tick.left+'px', 'top': tick.top+'px'}\" id=\"{{ tick.hour }}\"> {{ tick.hour }} </div> </div> <div class=\"clockpicker-dial clockpicker-minutes\" #minutesPlate [ngClass]=\"{'clockpicker-dial-out': showHours}\" [ngStyle]=\"{'visibility': showHours ? 'hidden' : 'visible'}\"> <div *ngFor=\"let tick of minutesTicks\" class=\"clockpicker-tick\" style=\"fonts-size: 120%;\" [ngStyle]=\"{'left': tick.left+'px', 'top': tick.top+'px'}\"> {{ tick.min }} </div> </div> </div> <div class=\"clockpicker-am-pm-block\" *ngIf=\"twelvehour\"> <button type=\"button\" class=\"btn-floating btn-flat clockpicker-button am-button\" [ngClass]=\"{'active': selectedHours.ampm=='AM'}\" (click)=\"setAmPm('AM')\"> AM </button> <button type=\"button\" class=\"btn-floating btn-flat clockpicker-button pm-button\" [ngClass]=\"{'active': selectedHours.ampm=='PM'}\" (click)=\"setAmPm('PM')\"> PM </button> </div> </div> <div class=\"picker__footer\"> <button type=\"button\" *ngIf=\"buttonLabel\" class=\"btn-flat clockpicker-button\" (click)=\"closeBtnClicked()\"> {{buttonLabel}} </button> <button type=\"button\" *ngIf=\"!buttonLabel\" class=\"btn-flat clockpicker-button\" (click)=\"closeBtnClicked()\"> Done </button> </div> </div> </div> </div> </div> </div> </div>",
                 providers: [TIME_PIRCKER_VALUE_ACCESSOT]
             },] },
 ];
@@ -12349,7 +12349,7 @@ class BaseChartDirective {
      */
     ngOnChanges(changes) {
         if (this.initFlag) {
-            // Check if the changes are in the data or datasets
+            // Check if the changes are in the personal_data or datasets
             if (changes.hasOwnProperty('data') || changes.hasOwnProperty('datasets')) {
                 if (changes['data']) {
                     this.updateChartData(changes['data'].currentValue);
@@ -12378,7 +12378,7 @@ class BaseChartDirective {
      * @param {?} ctx
      * @return {?}
      */
-    getChartBuilder(ctx /*, data:Array<any>, options:any*/) {
+    getChartBuilder(ctx /*, personal_data:Array<any>, options:any*/) {
         const /** @type {?} */ datasets = this.getDatasets();
         const /** @type {?} */ options = Object.assign({}, this.options);
         if (this.legend === false) {
@@ -12422,7 +12422,7 @@ class BaseChartDirective {
             });
         }
         else {
-            this.chart.data.datasets[0].data = newDataValues;
+            this.chart.data.datasets[0].personal_data = newDataValues;
         }
     }
     /**
@@ -12430,7 +12430,7 @@ class BaseChartDirective {
      */
     getDatasets() {
         let /** @type {?} */ datasets = void 0;
-        // in case if datasets is not provided, but data is present
+        // in case if datasets is not provided, but personal_data is present
         if (!this.datasets || !this.datasets.length && (this.data && this.data.length)) {
             if (Array.isArray(this.data[0])) {
                 datasets = (/** @type {?} */ (this.data)).map((data, index) => {
@@ -12466,7 +12466,7 @@ class BaseChartDirective {
      */
     refresh() {
         this.ngOnDestroy();
-        this.chart = this.getChartBuilder(this.ctx /*, data, this.options*/);
+        this.chart = this.getChartBuilder(this.ctx /*, personal_data, this.options*/);
     }
 }
 BaseChartDirective.defaultColors = [
@@ -13101,7 +13101,7 @@ function listenToTriggers(renderer, target, triggers, showFn, hideFn, toggleFn) 
         }
         listeners.push(renderer.listen(target, trigger$$1.open, () => {
             showFn();
-        }), 
+        }),
         // renderer.listen(target, trigger.open, showFn),
         renderer.listen(target, trigger$$1.close, () => {
             hideFn();
@@ -14197,7 +14197,7 @@ class MdbInputDirective {
             this.renderer.addClass(this.wrongTextContainer, 'inputVal');
             this.renderer.addClass(this.wrongTextContainer, 'text-danger');
             this.renderer.appendChild(this.el.nativeElement.parentElement, this.wrongTextContainer);
-            const /** @type {?} */ textWrong = this.el.nativeElement.getAttribute('data-error');
+            const /** @type {?} */ textWrong = this.el.nativeElement.getAttribute('personal_data-error');
             this.wrongTextContainer.innerHTML = (textWrong ? textWrong : 'wrong');
             this.renderer.setStyle(this.wrongTextContainer, 'visibility', 'hidden');
             // this.rightTextContainer = this.renderer.createElement(this.el.nativeElement.parentElement, 'span');
@@ -14205,7 +14205,7 @@ class MdbInputDirective {
             this.renderer.addClass(this.rightTextContainer, 'inputVal');
             this.renderer.addClass(this.rightTextContainer, 'text-success');
             this.renderer.appendChild(this.el.nativeElement.parentElement, this.rightTextContainer);
-            const /** @type {?} */ textSuccess = this.el.nativeElement.getAttribute('data-success');
+            const /** @type {?} */ textSuccess = this.el.nativeElement.getAttribute('personal_data-success');
             this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : 'success');
             this.renderer.setStyle(this.rightTextContainer, 'visibility', 'hidden');
         }
@@ -14471,13 +14471,13 @@ class InputValidateDirective {
         this.wrongTextContainer = this._renderer.createElement(this._elRef.nativeElement.parentElement, 'span');
         this._renderer.setElementClass(this.wrongTextContainer, 'inputVal', true);
         this._renderer.setElementClass(this.wrongTextContainer, 'text-danger', true);
-        const /** @type {?} */ textWrong = this._elRef.nativeElement.getAttribute('data-error');
+        const /** @type {?} */ textWrong = this._elRef.nativeElement.getAttribute('personal_data-error');
         this.wrongTextContainer.innerHTML = (textWrong ? textWrong : 'wrong');
         this._renderer.setElementStyle(this.wrongTextContainer, 'visibility', 'hidden');
         this.rightTextContainer = this._renderer.createElement(this._elRef.nativeElement.parentElement, 'span');
         this._renderer.setElementClass(this.rightTextContainer, 'inputVal', true);
         this._renderer.setElementClass(this.rightTextContainer, 'text-success', true);
-        const /** @type {?} */ textSuccess = this._elRef.nativeElement.getAttribute('data-success');
+        const /** @type {?} */ textSuccess = this._elRef.nativeElement.getAttribute('personal_data-success');
         this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : 'success');
         this._renderer.setElementStyle(this.rightTextContainer, 'visibility', 'hidden');
     }
@@ -14896,8 +14896,8 @@ const ClassName = {
 };
 const Selector = {
     DIALOG: '.modal-dialog',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
+    DATA_TOGGLE: '[personal_data-toggle="modal"]',
+    DATA_DISMISS: '[personal_data-dismiss="modal"]',
     FIXED_CONTENT: '.navbar-fixed-top, .navbar-fixed-bottom, .is-fixed'
 };
 const TransitionDurations = {

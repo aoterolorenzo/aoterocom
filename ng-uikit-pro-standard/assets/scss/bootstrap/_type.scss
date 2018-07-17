@@ -81,7 +81,7 @@ mark,
 // Lists
 //
 
-.list-unstyled {
+.contact-info {
   @include list-unstyled;
 }
 
@@ -116,7 +116,7 @@ mark,
 
 .blockquote-footer {
   display: block;
-  font-size: 80%; // back to default font-size
+  font-size: 80%; // back to default fonts-size
   color: $blockquote-small-color;
 
   &::before {

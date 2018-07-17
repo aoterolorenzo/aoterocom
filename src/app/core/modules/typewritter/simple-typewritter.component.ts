@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SimpleTypewritterComponent implements OnInit {
 
-  /* typewriter variable for data binding to template */
+  /* typewriter variable for personal_data binding to template */
   typewriter = '';
 
   /* typewriter params */

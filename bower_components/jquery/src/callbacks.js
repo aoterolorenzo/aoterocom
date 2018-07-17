@@ -61,7 +61,7 @@ jQuery.Callbacks = function( options ) {
 		// Actual callback list
 		list = [],
 
-		// Queue of execution data for repeatable lists
+		// Queue of execution personal_data for repeatable lists
 		queue = [],
 
 		// Index of currently firing callback (modified by add/remove as needed)
@@ -84,14 +84,14 @@ jQuery.Callbacks = function( options ) {
 					if ( list[ firingIndex ].apply( memory[ 0 ], memory[ 1 ] ) === false &&
 						options.stopOnFalse ) {
 
-						// Jump to end and forget the data so .add doesn't re-fire
+						// Jump to end and forget the personal_data so .add doesn't re-fire
 						firingIndex = list.length;
 						memory = false;
 					}
 				}
 			}
 
-			// Forget the data if we're done with it
+			// Forget the personal_data if we're done with it
 			if ( !options.memory ) {
 				memory = false;
 			}
@@ -101,7 +101,7 @@ jQuery.Callbacks = function( options ) {
 			// Clean up if we're done firing for good
 			if ( locked ) {
 
-				// Keep an empty list if we have data for future add calls
+				// Keep an empty list if we have personal_data for future add calls
 				if ( memory ) {
 					list = [];
 

@@ -10,4 +10,37 @@
   font-size: 1.2em;
 }
 
+logo{
+  font-family: 'Calligraffitti', cursive;
+  vertical-align: middle;
+}
+logo>a{
+  font-size: 18px;
+}
+
+.nav-item.active > .nav-link{
+  background-color: transparent !important;
+}
+.nav-item>hr{
+  display: none;
+  margin-top: 0;
+  margin-bottom: 6px !important;
+}
+.nav-item.active>hr{
+  display: block;
+ }
+.nav-link{
+  padding-bottom: 1px !important;
+  margin-top: 6px !important;
+  padding-top: 0 !important;
+  border-radius: 10px;
+}
+
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-menu a{
+  color: #fff !important;
+}
 

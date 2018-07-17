@@ -5,67 +5,32 @@
   <!-- Grid row -->
   <div class="row" align="center">
 
-    <div class="col-6 wow fadeInRight">
+    <div class="col-md-12 col-lg-6 wow fadeInLeft" style="margin: 0 auto">
 
       <!-- Section heading -->
       <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-        <i class="fa fa-mortar-board" aria-hidden="true"></i> Education
+        <i class="{{section[0]['icon']}}" aria-hidden="true"></i> {{section[0]['title']}}
       </h2>
 
-      <hr class="blue darken-4 width60bluefade">
+      <hr class="blackfade">
 
 
 
       <div class="education-stepper horizontal-padding-3" align="left">
         <ul class="stepper stepper-vertical">
 
-          <!-- First Step -->
-          <li class="completed">
-            <a href="#!">
-              <span class="square ao-border-bottom grey darken-4"><i class="fa fa-mortar-board" aria-hidden="true"></i> 2014 - 2018</span>
+          <!-- Steper -->
+          <li class="completed" *ngFor="let i of education">
+            <a style="cursor: default;">
+              <span class="square ao-border-bottom blue darken-ao"><i class="{{i['icon']}}" aria-hidden="true"></i> {{i['years']}}</span>
             </a>
 
             <div class="step-content" align="left">
-              <div class="label font-weight-bold">Bachelor's Degree in Computer Engineering</div>
-              <span class="label font-weight-light font-small text-black-50">Universidade da Coruña</span>
+              <div class="label font-weight-bold">{{i['title']}}</div>
+              <span class="label font-weight-light font-small text-black-50">{{i['center']}}</span>
             </div>
           </li>
-
-          <!-- Second Step -->
-          <li class="completed">
-            <a href="#!">
-              <span class="square ao-border-bottom grey darken-4 "><i class="fa fa-university" aria-hidden="true"></i> 2010 - 2013</span>
-            </a>
-
-            <div class="step-content" align="left">
-              <div class="label font-weight-bold">Certificate of Higher Education in Computing and IT</div>
-              <span class="label font-weight-light font-small text-black-50">CIFP Politécnico de Santiago de Compostela</span>
-            </div>
-          </li>
-
-          <!-- Third Step -->
-          <li class="completed">
-            <a href="#!">
-              <span class="square ao-border-bottom grey darken-4 "><i class="fa fa-book" aria-hidden="true"></i> 2007 - 2010</span>
-            </a>
-
-            <div class="step-content" align="left">
-              <div class="label font-weight-bold">General Certificate of Education</div>
-              <span class="label font-weight-light font-small text-black-50">IES Félix Muriel (Rianxo)</span>
-            </div>
-          </li>
-
-          <!-- Fourth Step -->
-          <li class="completed">
-            <a href="#!">
-              <span class="square ao-border-bottom grey darken-4 "><i class="fa fa-pencil" aria-hidden="true"></i> 2003 - 2007</span>
-            </a>
-
-            <div class="step-content" align="left">
-              <div class="label font-weight-bold">General Certificate of Secondary Education</div>
-              <span class="label font-weight-light font-small text-black-50">IES Félix Muriel (Rianxo)</span>
-            </div>
-          </li>
+          <!-- Steper -->
 
         </ul>
 
@@ -75,65 +40,27 @@
 
     </div>
 
-    <div class="col-6 wow fadeInLeft">
+    <div class="col-md-12 col-lg-6 wow fadeInRight" style="margin: 0 auto">
 
       <!-- Section heading -->
       <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-        <i class="fa fa-mortar-board" aria-hidden="true"></i> Skills
+        <i class="{{section[1]['icon']}}" aria-hidden="true"></i> {{section[1]['title']}}
       </h2>
 
-      <hr class="blue darken-4 width60bluefade">
+      <hr class="blackfade">
 
       <div id="skill-list" class="horizontal-padding-3" align="left">
 
-
-        <div class="label font-weight-bold" style="padding: 8px 0">Web design</div>
-
-        <div class="progress">
-          <div class="progress-bar wow slideInLeft grey darken-4 ao-border-bottom" data-wow-duration="1500ms" data-wow-delay="100ms" style="width: 95%; height: 100%" aria-valuenow="25"
-               aria-valuemin="0" aria-valuemax="100">
-            95%
-          </div>
-        </div>
-
-        <div class="label font-weight-bold" style="padding: 8px 0">Development</div>
+      <div *ngFor="let i of skills">
+        <div class="label font-weight-bold" style="padding: 8px 0">{{i['title']}}</div>
 
         <div class="progress">
-          <div class="progress-bar wow slideInLeft grey darken-4 ao-border-bottom" data-wow-duration="1300ms"  data-wow-delay="100ms" role="progressbar" style="width: 90%; height: 100%" aria-valuenow="25"
+          <div class="progress-bar wow slideInLeft blue darken-ao ao-border-bottom" data-wow-duration="1500ms" data-wow-delay="100ms" [ngStyle]="i['style']" style="height: 100%" aria-valuenow="25"
                aria-valuemin="0" aria-valuemax="100">
-            90%
+            {{i['percent']}}%
           </div>
         </div>
-
-        <div class="label font-weight-bold" style="padding: 8px 0">UNIX systems</div>
-
-        <div class="progress">
-          <div class="progress-bar wow slideInLeft grey darken-4 ao-border-bottom" data-wow-duration="1800ms" data-wow-delay="100ms" role="progressbar" style="width: 80%; height: 100%" aria-valuenow="25"
-               aria-valuemin="0" aria-valuemax="100">
-            80%
-          </div>
-        </div>
-
-        <div class="label font-weight-bold" style="padding: 8px 0">Networking</div>
-
-        <div class="progress">
-          <div class="progress-bar wow slideInLeft grey darken-4 ao-border-bottom" data-wow-duration="1500ms" data-wow-delay="100ms" role="progressbar" style="width: 86%; height: 100%" aria-valuenow="25"
-               aria-valuemin="0" aria-valuemax="100">
-            86%
-          </div>
-        </div>
-
-        <div class="label font-weight-bold" style="padding: 8px 0">Graphic design</div>
-
-        <div class="progress">
-          <div class="progress-bar wow fadeInLeft grey darken-4 ao-border-bottom"  data-wow-delay="100ms" role="progressbar" style="width: 65%; height: 100%" aria-valuenow="25"
-               aria-valuemin="0" aria-valuemax="100">
-            65%
-          </div>
-        </div>
-
-
-
+      </div>
 
       </div>
 
