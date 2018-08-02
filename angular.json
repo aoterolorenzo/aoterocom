@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mdb-angular-pro": {
+    "aoterocom": {
       "root": "",
       "projectType": "application",
       "prefix": "app",
@@ -11,7 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mdb-angular-pro",
+            "outputPath": "dist/aoterocom",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,18 +77,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mdb-angular-pro:build"
+            "browserTarget": "aoterocom:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mdb-angular-pro:build:production"
+              "browserTarget": "aoterocom:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mdb-angular-pro:build"
+            "browserTarget": "aoterocom:build"
           }
         },
         "test": {
@@ -129,7 +129,7 @@
         }
       }
     },
-    "mdb-angular-pro-e2e": {
+    "aoterocom-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -137,7 +137,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mdb-angular-pro:serve"
+            "devServerTarget": "aoterocom:serve"
           }
         },
         "lint": {

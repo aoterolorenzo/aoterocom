@@ -2,7 +2,7 @@
 
   <!-- Section heading -->
   <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-    <i class="{{section['icon']}}"></i> {{section['title']}}
+    <i class="fa fa-quote-left"></i> <span translate> About me</span>
   </h3>
 
   <hr class="blackfade">
@@ -12,7 +12,7 @@
     <!-- Grid column -->
     <div class="col-5 wow fadeInLeft" style="min-width: 380px;margin:0 auto" align="center">
 
-      <img style="margin-bottom: 2rem;margin-top: 1rem;" class="rounded-hard <!--avatar--> width-80" src="{{personal_data['profile_img']}}"/>
+      <img style="margin-bottom: 2rem;margin-top: 1rem;" class="rounded-hard <!--avatar--> width-80" src="{{img}}"/>
 
     </div>
     <!-- Grid column -->
@@ -22,16 +22,38 @@
 
       <div class="row" style="margin: auto;padding-bottom: 2rem;padding-left: 1rem;padding-right: 1rem;" align="left">
 
-        <div class="col-md-12 col-lg-6 font-small" *ngFor="let i of personal_data['data_entries']"   style="display: list-item;">
-          <h6 style="display: inline;">{{i['placeholder']}}:</h6>
-          {{i['content']}}
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Name:</h6>
+          {{name}}
         </div>
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Birth Date:</h6>
+          {{birth_date | date:'MMMM yyyy' }}
+        </div>
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Birth Place:</h6>
+          {{birth_place}}
+        </div>
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Nacionality:</h6>
+          {{nacionality}}
+        </div>
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Driving license:</h6>
+          {{driving_license}}
+        </div>
+        <div class="col-md-12 col-lg-6 font-small"  style="display: list-item;">
+          <h6 style="display: inline;" translate>Langs:</h6>
+          <span *ngFor="let lang of langs; let i = index"> {{lang['abbr']}}
+            {{langs.length - 1 == i? '' : ',' }}</span>
+        </div>
+
 
       </div>
 
 
-      <p class="grey-text mx-auto mb-3 font-small" *ngFor="let i of speech">
-        {{i['paragraph_content']}}
+      <p class="grey-text mx-auto mb-3 font-small" *ngFor="let paragraph of splitbynewline(description)">
+        {{paragraph}}
       </p>
 
     </div>
@@ -42,8 +64,11 @@
 
   <!-- Buttons -->
   <div class="resume-contact-buttons wow fadeInUp" style="margin: auto; padding-top: 1rem" align="center">
-    <button type="button" class="btn sticky-bottom {{i['color']}}" *ngFor="let i of buttons">
-      <i class="{{i['icon']}}"></i> {{i['text']}}
+    <button type="button" class="btn sticky-bottom blue darken-ao">
+      <i class="fas fa-download"></i> <span translate> Download resume</span>
+    </button>
+    <button type="button" class="btn sticky-bottom grey darken-3">
+      <i class="fas fa-envelope"></i> <span translate> Hire me</span>
     </button>
   </div>
 </div>

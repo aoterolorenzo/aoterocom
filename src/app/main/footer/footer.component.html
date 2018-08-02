@@ -2,7 +2,7 @@
   <div class="container white-text" style="padding-top: 3rem">
     <!--Section heading-->
     <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown ">
-      <i class="far fa-envelope" aria-hidden="true"></i> Get in touch
+      <i class="far fa-envelope" aria-hidden="true"></i> <span translate> Get in touch</span>
     </h2>
 
     <hr class="whitefade">
@@ -44,7 +44,7 @@
           <div class="col-md-6">
             <div class="md-form" style="margin-top: 0">
               <input type="text" id="form-contact-name" [mdbValidate]="false" class="form-control" mdbInputDirective>
-              <label for="form-contact-name" class="">{{form_placeholders['name']}}</label>
+              <label for="form-contact-name" class="" translate>Your name</label>
             </div>
           </div>
           <!-- Grid column -->
@@ -53,7 +53,7 @@
           <div class="col-md-6">
             <div class="md-form" style="margin-top: 0">
               <input type="email" id="form-contact-email" class="form-control" mdbInputDirective>
-              <label for="form-contact-email" class="">{{form_placeholders['email']}}</label>
+              <label for="form-contact-email" class="" translate>Your email</label>
             </div>
           </div>
           <!-- Grid column -->
@@ -68,7 +68,7 @@
           <div class="col-md-6">
             <div class="md-form mb-0">
               <input type="text" id="form-contact-phone" [mdbValidate]="false" class="form-control" mdbInputDirective>
-              <label for="form-contact-phone" class="">{{form_placeholders['phone']}}</label>
+              <label for="form-contact-phone" class="" translate>Your phone</label>
             </div>
           </div>
           <!-- Grid column -->
@@ -77,7 +77,7 @@
           <div class="col-md-6">
             <div class="md-form mb-0">
               <input type="text" id="form-contact-company" [mdbValidate]="false" class="form-control" mdbInputDirective>
-              <label for="form-contact-company" class="">{{form_placeholders['company']}}</label>
+              <label for="form-contact-company" translate>Your company</label>
             </div>
           </div>
           <!-- Grid column -->
@@ -93,7 +93,7 @@
             <div class="md-form mb-0">
               <textarea type="text" id="form-contact-message" [mdbValidate]="false" class="form-control md-textarea-scroll"
                         mdbInputDirective rows="3" style="width: 80%;height: 142px;"></textarea>
-              <label for="form-contact-message" id="form-contact-message-label">{{form_placeholders['message']}}</label>
+              <label for="form-contact-message" id="form-contact-message-label" translate>Message</label>
               <a class="btn-floating btn-lg blue darken-ao float-right" style="bottom:90px">
                 <i class="fa fa-send-o"></i>
               </a>
@@ -111,7 +111,7 @@
 </section>
 <section id="license">
   <div class="container" align="center">
-    <i><i class="far fa-copyright"></i> {{license_msg}}</i>
+    <i translate><i class="far fa-copyright"></i> Copyright 2018 All rights reserved. Designed and developed by Alberto Otero</i>
   </div>
 </section>
 

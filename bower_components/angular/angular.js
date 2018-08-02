@@ -2533,7 +2533,7 @@ function setupModuleLoader(window) {
            *    configuration.
            * @description
            * Use this method to configure services by injecting their
-           * {@link angular.Module#provider `providers`}, e.g. for adding routes to the
+           * {@link angular.Module#provider `providers`}, e.g. for adding routers to the
            * {@link ngRoute.$routeProvider $routeProvider}.
            *
            * Note that you can only inject {@link angular.Module#provider `providers`} and

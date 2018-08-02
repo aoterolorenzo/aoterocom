@@ -2,45 +2,25 @@
 
   <!-- Section heading -->
   <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-    <i class="{{section['icon']}}"></i> {{section['title']}}
+    <i class="fas fa-book"></i> <span translate> Technologies</span>
   </h3>
 
   <hr class="blackfade">
   <!-- Grid row -->
   <div class="row" align="center">
 
-    <div class="col-md-6 wow fadeInLeft">
 
-      <div style="margin: 2rem" *ngFor="let i of techs['row1']">
-        <h4><i class="{{i['icon-class']}}"></i> {{i['title']}}</h4>
+      <div class="col-md-6 wow fadeInLeft" style="padding: 2rem" *ngFor="let i of techs">
+        <h4 i18n><i [ngClass]="i['icon']"></i> {{i['name']}}</h4>
         <hr>
 
         <div class="d-flex flex-row" style="flex-wrap: wrap;-webkit-flex-wrap: wrap;">
           <span class="card tech-logo wow zoomIn" data-wow-delay="300ms"  *ngFor="let j of i['items']">
-           <i class="tech-fa {{j['tech-icon-class']}}"></i>
-           <span class="tech-icon-tittle">{{j['tech-tittle']}}</span>
+           <i [ngClass]="'tech-fa ' + j['icon']"></i>
+           <span class="tech-icon-tittle">{{j['name']}}</span>
           </span>
         </div>
       </div>
-
-    </div>
-
-    <div class="col-md-6 wow fadeInRight">
-
-      <div style="margin: 2rem" *ngFor="let i of techs['row2']">
-        <h4><i class="{{i['icon-class']}}"></i> {{i['title']}}</h4>
-        <hr>
-
-        <div class="d-flex flex-row" style="flex-wrap: wrap;-webkit-flex-wrap: wrap;">
-          <span class="card tech-logo wow zoomIn" data-wow-delay="300ms"  *ngFor="let j of i['items']">
-           <i class="tech-fa {{j['tech-icon-class']}}"></i>
-           <span class="tech-icon-tittle">{{j['tech-tittle']}}</span>
-          </span>
-        </div>
-      </div>
-
-    </div>
-
 
 
   </div>

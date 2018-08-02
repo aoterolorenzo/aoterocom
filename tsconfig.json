@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

@@ -9,7 +9,7 @@
 
       <!-- Section heading -->
       <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-        <i class="{{section[0]['icon']}}" aria-hidden="true"></i> {{section[0]['title']}}
+        <i class="fa fa-mortar-board" aria-hidden="true"></i> <span translate=""> Education</span>
       </h2>
 
       <hr class="blackfade">
@@ -22,12 +22,12 @@
           <!-- Steper -->
           <li class="completed" *ngFor="let i of education">
             <a style="cursor: default;">
-              <span class="square ao-border-bottom blue darken-ao"><i class="{{i['icon']}}" aria-hidden="true"></i> {{i['years']}}</span>
+              <span class="square ao-border-bottom blue darken-ao"><i class="{{i['icon']}}" aria-hidden="true"></i> {{i['start'] | date: 'yyy'}} - {{i['end']  | date: 'yyy'}}</span>
             </a>
 
             <div class="step-content" align="left">
-              <div class="label font-weight-bold">{{i['title']}}</div>
-              <span class="label font-weight-light font-small text-black-50">{{i['center']}}</span>
+              <div class="label font-weight-bold">{{i['name']}}</div>
+              <span class="label font-weight-light font-small text-black-50">{{i['place']}}</span>
             </div>
           </li>
           <!-- Steper -->
@@ -44,7 +44,7 @@
 
       <!-- Section heading -->
       <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
-        <i class="{{section[1]['icon']}}" aria-hidden="true"></i> {{section[1]['title']}}
+        <i class="fa fa-lightbulb" aria-hidden="true"></i> <span translate> Skills</span>
       </h2>
 
       <hr class="blackfade">
@@ -52,10 +52,10 @@
       <div id="skill-list" class="horizontal-padding-3" align="left">
 
       <div *ngFor="let i of skills">
-        <div class="label font-weight-bold" style="padding: 8px 0">{{i['title']}}</div>
+        <div class="label font-weight-bold" style="padding: 8px 0">{{i['name']}}</div>
 
         <div class="progress">
-          <div class="progress-bar wow slideInLeft blue darken-ao ao-border-bottom" data-wow-duration="1500ms" data-wow-delay="100ms" [ngStyle]="i['style']" style="height: 100%" aria-valuenow="25"
+          <div class="progress-bar wow slideInLeft blue darken-ao ao-border-bottom" data-wow-duration="1500ms" data-wow-delay="100ms" [ngStyle]="{'width': i['percent']+'%'}" style="height: 100%" aria-valuenow="25"
                aria-valuemin="0" aria-valuemax="100">
             {{i['percent']}}%
           </div>

@@ -3,15 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from './../../ng-uikit-pro-standard';
-import {ContentComponent} from "./main/content/content.component";
-import {NavbarComponent} from "./main/navbar/navbar.component";
-import {FooterComponent} from "./main/footer/footer.component";
-import {ParticlesModule} from "angular-particle";
+import {ContentComponent} from './main/content/content.component';
+import {NavbarComponent} from './main/navbar/navbar.component';
+import {FooterComponent} from './main/footer/footer.component';
+import {ParticlesModule} from 'angular-particle';
 import { HomeComponent } from './main/content/home/home.component';
 import { CoverComponent } from './main/content/home/cover/cover.component';
 import { AboutMeComponent } from './main/content/home/about-me/about-me.component';
@@ -20,6 +19,10 @@ import { SimpleTypewritterComponent } from './core/modules/typewritter/simple-ty
 import { MiddleParallaxComponent } from './main/content/home/middle-parallax/middle-parallax.component';
 import { TechsComponent } from './main/content/home/techs/techs.component';
 import { SafeHtml } from './core/pipes/safeHtml.pipe';
+import {AppService} from './app.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -37,10 +40,17 @@ import { SafeHtml } from './core/pipes/safeHtml.pipe';
     SafeHtml
   ],
   imports: [
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
     ParticlesModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
@@ -49,10 +59,14 @@ import { SafeHtml } from './core/pipes/safeHtml.pipe';
       apiKey: 'AIzaSyCodAwA7RGboaeG73PGSSe8RSFXfA6hhyQ'
     })
   ],
-  providers: [MDBSpinningPreloader],
+  providers: [MDBSpinningPreloader, AppService],
   bootstrap: [AppComponent],
   schemas:      [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 

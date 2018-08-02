@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppService} from '../../app.service';
 
 
 @Component({
@@ -194,44 +195,38 @@ export class FooterComponent implements OnInit {
             }
           ]
         }
-      ],
-    marker: {
-      lat: 43.361230,
-      lng: -8.419875,
-    }
+      ]
   };
 
   contact_icons = [
     {
       'icon-class': 'fas fa-map-marker fa-2x',
-      'text': 'A Coruña, ES'
+      'text': ''
     },
     {
       'icon-class': 'fab fa-telegram-plane fa-2x mt-4',
-      'text': 'aoterocom'
+      'text': ''
     },
     {
       'icon-class': 'far fa-envelope fa-2x mt-4',
-      'text': 'contact@aotero.com'
+      'text': ''
     }
   ];
 
-  form_placeholders = {
-    'name': 'Your name',
-    'email': 'Your email',
-    'phone': 'Your phone',
-    'company': 'Your company',
-    'message': 'Your message'
-  };
-
-  license_msg = 'Copyright 2018 All rights reserved. Designed and developed by Alberto Otero';
+  constructor(appService: AppService) {
+    appService.getResume().subscribe(x => {
+      this.map.lat = x['contact_lat'];
+      this.map.lng = x['contact_long'];
+      this.contact_icons[0].text = x['contact_place'];
+      this.contact_icons[1].text = x['contact_line'];
+      this.contact_icons[2].text = x['email'];
 
 
+    });
 
+  }
 
-  constructor() { }
-  ngOnInit() {
-
+  ngOnInit(): void {
   }
 
 }

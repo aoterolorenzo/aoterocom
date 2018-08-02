@@ -1,5 +1,5 @@
 <section id="cover">
-  <div class="view cover-jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://i.imgur.com/XP10AR9.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="view cover-jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://i.imgur.com/XP10AR9.jpg');">
     <div class="mask rgba-black-strong">
 
       <div id="particles-js"></div>
@@ -8,7 +8,7 @@
         <div class="row mt-5">
           <div class="col-md-12 wow fadeIn mb-3">
             <div class="home-content home-content-fullwidth">
-              <div class="wow fadeInDown"><h3>{{iam}}</h3>
+              <div class="wow fadeInDown"><h3 style="text-transform: none;" translate>Hi, I'm</h3>
                 <h1 class="header-title-text type-animate">
                   <a href="" class="typewrite">
                     <app-typewritter [data]="typewritterArray"></app-typewritter>
@@ -20,7 +20,7 @@
 
 
                   <li *ngFor="let i of sociallinks">
-                    <a [href]="i['social-link'] | safeHtml" target="_blank"><i [class]="i['fa-icon-class']"></i></a>
+                    <a [href]="i['link'] | safeHtml" target="_blank"><i [class]="i['icon']"></i></a>
                   </li>
 
                 </ul>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppService} from '../../../../app.service';
 declare const particlesJS: any;
 
 @Component({
@@ -8,39 +9,17 @@ declare const particlesJS: any;
 })
 export class CoverComponent implements OnInit {
 
-  /* typewriter params */
-  typewritterArray: Array<string> = ['Alberto Otero', 'Computer engineer',
-    'Web designer', 'Developer', 'Minimalist', 'Meticulous', 'Pasionate', 'Hard worker'];
+  // Variables to fullfill with api request
+  typewritterArray: Array<string>; // typewriter params
+  sociallinks: any;
 
-  iam = 'Hi, I\'m';
+  constructor(appService: AppService) {
+    appService.getResume().subscribe(x => {
+      this.typewritterArray = x['words'];
+      this.sociallinks = x['social_links'];
+    });
 
-  sociallinks = [
-    /* Font awesome social icon class & Link to social profile */
-    {
-      'fa-icon-class': 'fab fa-telegram-plane',
-      'social-link': 'https://telegram.me/aoterocom'
-    },
-    {
-      'fa-icon-class': 'fab fa-facebook',
-      'social-link': 'https://www.facebook.com/aoterocom'
-    },
-    {
-      'fa-icon-class': 'fab fa-instagram',
-      'social-link': 'https://www.instagram.com/aotero_/'
-    },
-    {
-      'fa-icon-class': 'fab fa-github',
-      'social-link': 'https://github.com/aoterolorenzo'
-    },
-    {
-      'fa-icon-class': 'fab fa-linkedin',
-      'social-link': 'https://www.linkedin.com/in/aoterocom/'},
-    {
-      'fa-icon-class': 'fab fa-skype',
-      'social-link': 'skype:aoterolorenzo?call'
-    }
-
-  ];
+  }
 
   public ngOnInit() {
     /* particles.js config on div with id 'particles-js'*/
