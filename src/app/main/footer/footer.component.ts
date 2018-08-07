@@ -214,7 +214,7 @@ export class FooterComponent implements OnInit {
   ];
 
   constructor(appService: AppService) {
-    appService.getResume().subscribe(x => {
+    appService.getResume().subscribe((x: JSON) => {
       this.map.lat = x['contact_lat'];
       this.map.lng = x['contact_long'];
       this.contact_icons[0].text = x['contact_place'];

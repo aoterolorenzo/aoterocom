@@ -7,24 +7,42 @@ const Resume = require('../models/resume.model');
  */
 
 function getAlberto(req, res) {
-    let filter = {email : 'info@aotero.com'};
+  let filter = {uname : req.params.uname};
 
-    Resume.findOne(filter)
-      .then((modelInstance) => {
+  Resume.findOne(filter)
+    .then((modelInstance) => {
 
-        if (modelInstance != null) {
-          res.json(modelInstance);
-        }
-        else {
-          res.status(404).send({message: 'Not found'});
-        }
+      if (modelInstance != null) {
+        res.json(modelInstance);
+      }
+      else {
+        res.status(404).send({message: 'Not found'});
+      }
 
-      }).catch((err) => {
-      res.status(500).send({message: 'Internal server error'})
-    });
+    }).catch((err) => {
+    res.status(500).send({message: 'Internal server error'})
+  });
+}
+
+function getAlbertobyLang(req, res) {
+  let filter = {uname : req.params.uname, lv: req.params.lang};
+
+  Resume.findOne(filter)
+    .then((modelInstance) => {
+
+      if (modelInstance != null) {
+        res.json(modelInstance);
+      }
+      else {
+        res.status(404).send({message: 'Not found'});
+      }
+
+    }).catch((err) => {
+    res.status(500).send({message: 'Internal server error'})
+  });
 }
 
 /**
  * @typedef Resume
  */
-module.exports =  {getAlberto};
+module.exports =  {getAlberto, getAlbertobyLang};

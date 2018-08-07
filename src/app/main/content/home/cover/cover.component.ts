@@ -14,7 +14,7 @@ export class CoverComponent implements OnInit {
   sociallinks: any;
 
   constructor(appService: AppService) {
-    appService.getResume().subscribe(x => {
+    appService.getResume().subscribe((x: JSON) => {
       this.typewritterArray = x['words'];
       this.sociallinks = x['social_links'];
     });

@@ -14,7 +14,7 @@ export class ResumeComponent implements OnInit {
 
 
   constructor(appService: AppService) {
-    appService.getResume().subscribe(x => {
+    appService.getResume().subscribe((x: JSON) => {
       this.education = x['education'];
       this.skills = x['skills'];
 

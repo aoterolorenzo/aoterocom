@@ -20,7 +20,7 @@ export class AboutMeComponent implements OnInit {
 
 
   constructor(appService: AppService) {
-    appService.getResume().subscribe(x => {
+    appService.getResume().subscribe((x: JSON) => {
       this.img = x['img'];
       this.name = x['name'];
       this.birth_date = x['birth_date'];

@@ -32,19 +32,22 @@ export class SimpleTypewritterComponent implements OnInit {
   * */
   typeWrittingEffect(): string {
 
+    if (this.data) {
+
     // Time to type when the string is empty
     if (this.typewriter.length === 0) {
 
       // If word is unitializated, starts with first word
       if (this.word === -1) this.word = 0;
       // Else go to next or return to first dif it is the last one
-      else if (this.word === this.data.length - 1) this.word = 0;
+      else if (this.data && this.word === this.data.length - 1) this.word = 0;
       else this.word++;
 
       // Anyway, we always start typing at this point
       this.typing = true;
 
     }
+
 
     // If string is not completed and is in crescendo
     if (this.typewriter !== this.data[this.word] && this.typing ) {
@@ -66,7 +69,9 @@ export class SimpleTypewritterComponent implements OnInit {
     }
 
 
+    }
 
+    return '';
 
   }
 

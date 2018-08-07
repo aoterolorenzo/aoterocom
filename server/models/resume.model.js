@@ -45,6 +45,7 @@ let ResumeSchema = new Schema({
     type: String,
     required: true
   },
+  uname: String,
   img: String,
   birth_date: Date,
   birth_place: String,
@@ -57,10 +58,7 @@ let ResumeSchema = new Schema({
   contact_long: String,
   contact_line: String,
   contact_place: String,
-  email: {
-    type: String,
-    unique: true
-  },
+  email: String,
   words: [String],
   langs: [LangSchema],
   social_links: [ContactIconSchema],

@@ -163,5 +163,55 @@ label {
   }
 }
 
+.spinning-preloader-container {
+  background: rgba(12, 37, 75, 1);
+}
 
 
+
+.spinner-white,
+.spinner-white-only {
+  border-color: whitesmoke;
+}
+
+.active .spinner-layer.spinner-white {
+  /* durations: 4 * ARCTIME */
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+}
+
+.white-color {
+  .mat-progress-bar-buffer {
+    background-color: white;
+  }
+  .mat-progress-bar-fill::after {
+    background-color: #c5c5c5;
+  }
+}
+
+.progress .indeterminate {
+  background-color: #1f3961;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    // Custom bezier
+    animation: indeterminate 2.1s cubic-bezier(0.650, 0.815, 0.735, 0.395) infinite;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    // Custom bezier
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
+    animation-delay: 1.15s;
+  }
+}
