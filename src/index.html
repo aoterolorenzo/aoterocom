@@ -27,19 +27,32 @@
 
 </head>
 <body>
+
   <div class="spinning-preloader-container">
-    <div style="width: 40%;">
-      <div class="progress white-color">
+
+    <div style="position: absolute;top:0;left:0; width: 100%">
+      <div class="progress white-color" style="height: 2px !important;">
       <div class="indeterminate"></div>
     </div>
-    </div>
+
+      </div>
+    <div class="spinning-preloader-texture" style="position: absolute;top:0;left:0; width: 100%;height: 100%"></div>
 
 
   </div>
   <app-root></app-root>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
-    new WOW().init();
+    wow = new WOW(
+      {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      });
+
+    wow.init();
   </script>
 
 </body>

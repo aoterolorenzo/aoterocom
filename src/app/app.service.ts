@@ -7,13 +7,12 @@ import {share} from 'rxjs/operators';
 @Injectable()
 export class AppService {
 
-  url = 'http://localhost:3000/api/v1/resume/alberto';
+  url = 'http://' + window.location.hostname + ':3000/api/v1/resume/alberto';
 
   resume: any;
 
   constructor(public http: HttpClient) {
 
-      console.log(this.url + '/lang/' + (localStorage.getItem('LANG') || 'en'));
       this.resume = this.http.get(this.url + '/lang/' + (localStorage.getItem('LANG') || 'en'))
         .pipe(share());
 

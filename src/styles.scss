@@ -80,6 +80,13 @@ hr.middle-banner{
   width: 80%;
 }
 
+@media screen and (max-width: 768px) {
+  .width-80 {
+    width: 100%;
+  }
+
+}
+
 .md-form label{
   color: whitesmoke;
 
@@ -164,7 +171,18 @@ label {
 }
 
 .spinning-preloader-container {
-  background: rgba(12, 37, 75, 1);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43578c+1,293759+27,0c254b+100 */
+  background: #43578c; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#43578c', endColorstr='#0c254b', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+
+.spinning-preloader-texture {
+  background-color: transparent;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 

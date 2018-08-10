@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {AppService} from './app.service';
 import { TranslateService } from '@ngx-translate/core';
 import {MDBSpinningPreloader} from '../../ng-uikit-pro-standard';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
+declare const jarallax: any;
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    jarallax(document.querySelectorAll('.jarallax'), {
+      disableParallax: /iPad|iPhone|iPod|Android/,
+      disableVideo: /iPad|iPhone|iPod|Android/
+    });
 
     /** The OnInit function doesn't wait to background-image's from loading completely so
      *  we need to make a workaround to the MDBSpinningPreloader stops after that.
