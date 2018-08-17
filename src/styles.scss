@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Sunflower', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+
 
 }
 
@@ -170,18 +172,27 @@ label {
   }
 }
 
+@media (max-width: 992px) {
+  .dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16), 0 1px 15px 0 rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
 .spinning-preloader-container {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43578c+1,293759+27,0c254b+100 */
-  background: #43578c; /* Old browsers */
-  background: -moz-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#43578c', endColorstr='#0c254b', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+  background: rgb(12, 37, 75); /* Old browsers */
+
+ /* background: -moz-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); !* FF3.6-15 *!
+  background: -webkit-linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); !* Chrome10-25,Safari5.1-6 *!
+  background: linear-gradient(45deg, #43578c 1%, #293759 27%, #0c254b 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#43578c', endColorstr='#0c254b', GradientType=1); !* IE6-9 fallback on horizontal gradient *!
+*/
 }
 
 .spinning-preloader-texture {
   background-color: transparent;
-  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  background-image: url("/assets/img/60-lines.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 

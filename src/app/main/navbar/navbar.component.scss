@@ -19,6 +19,7 @@ logo>a{
 }
 
 .nav-item.active > .nav-link{
+  color: #fff !important;
   background-color: transparent !important;
 }
 .nav-item>hr{
@@ -30,6 +31,7 @@ logo>a{
   display: block;
  }
 .nav-link{
+  color: #D8D8D8 !important;
   padding-bottom: 1px !important;
   margin-top: 6px !important;
   padding-top: 0 !important;

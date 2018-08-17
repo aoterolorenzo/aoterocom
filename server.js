@@ -9,7 +9,7 @@ mongoose.Promise = Promise;
 const port = 3000;
 
 // db connect
-mongoose.connect('mongodb://localhost/aoterocom', (err, res) => {
+mongoose.connect('mongodb://localhost:27017/aoterocom', { useNewUrlParser: true }, (err, res) => {
   if (!err) console.log('database is connected');
   else throw err;
 });

@@ -23,6 +23,7 @@ import {AppService} from './app.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PreloaderComponent } from './main/preloader/preloader.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     SimpleTypewritterComponent,
     MiddleParallaxComponent,
     TechsComponent,
-    SafeHtml
+    SafeHtml,
+    PreloaderComponent
   ],
   imports: [
     HttpClientModule,

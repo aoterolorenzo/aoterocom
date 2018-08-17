@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AppService} from './app.service';
 import { TranslateService } from '@ngx-translate/core';
 import {MDBSpinningPreloader} from '../../ng-uikit-pro-standard';
@@ -10,7 +10,7 @@ declare const jarallax: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   resume: Object;
 
@@ -22,6 +22,13 @@ export class AppComponent implements OnInit {
 
   switchLanguage(language: string) {
       this.translate.use(language);
+  }
+
+  ngAfterViewInit() {
+    const img = new Image();
+    img.src = '/assets/img/60-lines.png';
+    img.src = '/assets/img/alberto-otero2.logo.png';
+
   }
 
   ngOnInit() {
@@ -44,7 +51,7 @@ export class AppComponent implements OnInit {
 
     const img = new Image();
     img.onload = function() {
-      (new MDBSpinningPreloader(document)).stop();
+       (new MDBSpinningPreloader(document)).stop();
     };
     img.src = 'https://i.imgur.com/XP10AR9.jpg';
 
