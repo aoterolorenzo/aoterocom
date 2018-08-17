@@ -174,7 +174,7 @@ label {
 
 @media (max-width: 992px) {
   .dropdown-menu{
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16), 0 1px 15px 0 rgba(0, 0, 0, 0.12) !important;
   }
 }
@@ -243,4 +243,8 @@ label {
     animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite;
     animation-delay: 1.15s;
   }
+}
+
+.aocolor{
+  background: #284c84;
 }
