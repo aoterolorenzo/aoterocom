@@ -23,14 +23,32 @@
           <a class="dropdown-item waves-light" mdbWavesEffect  href="#footer" [pageScrollDuration]="800" mdbPageScroll translate>Get in touch</a>
         </div>
       </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" href="#footer" mdbPageScroll [pageScrollDuration]="800" [pageScrollOffset]="90" translate>Projects</a>
-        <hr class="whitefade no-margin no-padding">
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-globe"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown" style="min-width: 0;width: 46px;" role="menu">
+
+          <div class="view zoom"
+               style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;cursor:pointer;"
+               mdbWavesEffect (click)="switchLanguage('en')">
+            <img id="ukflag" style="width: 28px;padding: 0;"
+                 src="https://cdn.iconscout.com/public/images/icon/free/png-256/united-kingdom-flag-country-nation-empire-373035d924ef1fe0-256x256.png"/>
+          </div>
+
+          <div class="view zoom"
+               style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;cursor:pointer;"
+               mdbWavesEffect (click)="switchLanguage('es')">
+
+            <img id="spainflag" style="width: 28px;padding: 0;"
+                 src="https://cdn.iconscout.com/public/images/icon/free/png-256/spain-flag-country-nation-empire-3eff8ec6b90651c1-256x256.png"/>
+          </div>
+
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="switchLanguage('es')">Blog</a>
-        <hr class="whitefade no-margin no-padding">
-      </li>-->
     </ul>
   </links>
 </mdb-navbar>
