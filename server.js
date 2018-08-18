@@ -1,4 +1,5 @@
 const express =  require('express');
+var secure = require('express-force-https');
 const path = require('path');
 const app = express();
 const resumeRouter = require('./server/routers/resume.router');
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/aoterocom', { useNewUrlParser: true 
 });
 
 // middleware
+app.use(secure);
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*'); // * => allow all origins
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS,DELETE');
