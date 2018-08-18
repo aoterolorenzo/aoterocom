@@ -8,5 +8,12 @@ if (environment.production) {
   enableProdMode();
 }
 
+const forceSSL = function () {
+  if (window.location.protocol !== 'https') {
+    window.location.href = window.location.href.replace('http', 'https');
+  }
+};
+forceSSL();
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
