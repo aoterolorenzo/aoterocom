@@ -7,7 +7,7 @@ import {share} from 'rxjs/operators';
 @Injectable()
 export class AppService {
 
-  url = 'https://' + window.location.hostname + ':3000/api/v1/resume/alberto';
+  url = 'http://' + window.location.hostname + ':3000/api/v1/resume/alberto';
 
   resume: any;
 

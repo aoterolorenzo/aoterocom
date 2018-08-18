@@ -19,6 +19,8 @@
              [pageScrollOffset]="65" href="#resume" translate>Education and Skills</a>
           <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800"
              [pageScrollOffset]="90" href="#techs" translate>Technologies</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800"
+             [pageScrollOffset]="90" href="#other-skills" translate>Other Skills</a>
           <div class="divider dropdown-divider"> </div>
           <a class="dropdown-item waves-light" mdbWavesEffect  href="#footer" [pageScrollDuration]="800" mdbPageScroll translate>Get in touch</a>
         </div>
@@ -30,21 +32,29 @@
         <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           <i class="fa fa-globe"></i>
         </a>
-        <div *dropdownMenu class="dropdown-menu dropdown" style="min-width: 0;width: 46px;" role="menu">
+        <div *dropdownMenu class="dropdown-menu dropdown" style="min-width: 0;width: 126px;left: -50px;top:-4px" role="menu">
 
           <div class="view zoom"
-               style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;cursor:pointer;"
+               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
                mdbWavesEffect (click)="switchLanguage('en')">
-            <img id="ukflag" style="width: 28px;padding: 0;"
+            <img id="ukflag" style="width: 28px;padding: 0;display: inline"
                  src="/assets/icon/uk.png"/>
           </div>
 
           <div class="view zoom"
-               style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;cursor:pointer;"
+               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
                mdbWavesEffect (click)="switchLanguage('es')">
 
-            <img id="spainflag" style="width: 28px;padding: 0;"
+            <img id="spainflag" style="width: 28px;padding: 0;display: inline"
                  src="/assets/icon/es.png"/>
+          </div>
+
+          <div class="view zoom"
+               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
+               mdbWavesEffect (click)="switchLanguage('gl')">
+
+            <img id="galicianflag" style="width: 28px;padding: 0;display: inline"
+                 src="/assets/icon/gl.png"/>
           </div>
 
         </div>
