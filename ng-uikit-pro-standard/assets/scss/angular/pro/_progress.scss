@@ -220,6 +220,7 @@
 }
 
 .active .spinner-layer.spinner-blue-only,
+.active .spinner-layer.spinner-white-only,
 .active .spinner-layer.spinner-red-only,
 .active .spinner-layer.spinner-yellow-only,
 .active .spinner-layer.spinner-green-only,
@@ -625,7 +626,7 @@
   display: none;
 }
 
-// <progressbar> static 
+// <progressbar> static
 .progress {
   height: 4px !important;
   .progress-bar {

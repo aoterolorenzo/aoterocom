@@ -1,9 +1,14 @@
-<div class="container my-5">
+<div class="container my-5" id="ab-me">
 
   <!-- Section heading -->
-  <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown">
+  <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown hideforprint">
     <i class="fa fa-quote-left"></i> <span translate> About me</span>
   </h3>
+
+
+  <div class="text-center showforprint" style="margin:auto;display: none">
+    <img src="/assets/img/alberto-otero-black.logo.png" style="height: 50px"/>
+  </div>
 
   <hr class="blackfade">
   <!-- Grid row -->
@@ -63,12 +68,12 @@
   <!-- Grid row -->
 
   <!-- Buttons -->
-  <div class="resume-contact-buttons wow fadeInUp" style="margin: auto; padding-top: 1rem" align="center">
-    <button type="button" class="btn sticky-bottom blue darken-ao">
-      <i class="fas fa-download"></i> <span translate> Download resume</span>
+  <div class="resume-contact-buttons wow fadeInUp hideforprint" style="margin: auto; padding-top: 1rem" align="center">
+    <button type="button" class="btn sticky-bottom blue darken-ao" (click)="print()">
+      <i class="fas fa-download hideforprint"></i> <span translate> Download resume</span>
     </button>
     <button type="button" class="btn sticky-bottom grey darken-3">
-      <i class="fas fa-envelope"></i> <span translate> Hire me</span>
+      <a href="mailto:info@aotero.com" style="color:white"><i class="fas fa-envelope hideforprint"></i> <span translate> Hire me</span></a>
     </button>
   </div>
 </div>

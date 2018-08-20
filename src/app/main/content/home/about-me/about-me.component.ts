@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AppService} from '../../../../app.service';
-
+import * as $ from 'jquery';
+import {MDBSpinningPreloader} from '../../../../../../ng-uikit-pro-standard';
 @Component({
   selector: 'app-home-about-me',
   templateUrl: './about-me.component.html',
@@ -42,5 +43,27 @@ export class AboutMeComponent implements OnInit {
     return string != null ? string.split('\n\n') : '';
 
   }
+
+  print() {
+    // const originalContents = document.body.innerHTML;
+
+    const winheight = $(window).height();
+    (new MDBSpinningPreloader(document)).start();
+    if (winheight !== undefined)
+      $('html, body').animate({ scrollTop: $(document).height() || winheight });
+    window.scrollTo(0, document.body.scrollHeight);
+    $('.hideforprint').hide();
+    $('.showforprint').show();
+
+    setTimeout(() => {
+      (new MDBSpinningPreloader(document)).stop();
+      window.print();
+      $('.hideforprint').show();
+      $('.showforprint').hide();
+    }, 6000);
+
+
+  }
+
 
 }
