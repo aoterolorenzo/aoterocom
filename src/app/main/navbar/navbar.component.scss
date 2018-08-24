@@ -18,18 +18,30 @@ logo>a{
   font-size: 18px;
 }
 
-.nav-item.active > .nav-link{
+.nav-link.active{
   color: #fff !important;
   background-color: transparent !important;
 }
-.nav-item>hr{
-  display: none;
+.nav-item>hr:not(.active){
+  opacity: 0;
+  visibility: hidden;
   margin-top: 0;
   margin-bottom: 6px !important;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
-.nav-item.active>hr{
-  display: block;
- }
+.nav-link.active+hr, hr.active{
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+span.active + #ddmain{
+  color: white !important;
+}
+
+
 .nav-link{
   color: #D8D8D8 !important;
   padding-bottom: 1px !important;
@@ -45,4 +57,9 @@ logo>a{
 .navbar .dropdown-menu a{
   color: #fff !important;
 }
+
+/*.rd:hover > #resume-menu-dropdown {
+  display: block;
+}*/
+
 

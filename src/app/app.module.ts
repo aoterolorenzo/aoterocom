@@ -25,6 +25,9 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PreloaderComponent } from './main/preloader/preloader.component';
 import { ExperienceComponent } from './main/content/home/experience/experience.component';
+import { BlogComponent } from './main/content/blog/blog.component';
+import {AppRoutingModule} from './app-routing.module';
+import { ProjectsComponent } from './main/content/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +44,13 @@ import { ExperienceComponent } from './main/content/home/experience/experience.c
     TechsComponent,
     SafeHtml,
     PreloaderComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    BlogComponent,
+    ProjectsComponent
   ],
   imports: [
     HttpClientModule,
+    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

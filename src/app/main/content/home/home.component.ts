@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnDestroy {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnDestroy() {
+    $('html, body').animate({ scrollTop: 0 }, 800);
   }
 
 }
