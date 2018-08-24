@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {RoutingAnimationHelper} from '../../../core/helpers/routing-animation.helper';
 
 @Component({
@@ -6,11 +6,7 @@ import {RoutingAnimationHelper} from '../../../core/helpers/routing-animation.he
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent extends RoutingAnimationHelper implements OnInit {
+export class ProjectsComponent extends RoutingAnimationHelper {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
