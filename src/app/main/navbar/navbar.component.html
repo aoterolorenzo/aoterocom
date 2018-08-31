@@ -44,7 +44,7 @@
         <hr class="whitefade no-margin no-padding">
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto nav-flex-icons">
+    <ul class="navbar-nav ml-auto nav-flex-icons float-right">
       <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
@@ -77,8 +77,28 @@
 
         </div>
       </li>
+      <li *ngIf="guest; else logguedIn" class="nav-item dropdown" dropdown>
+        <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-user"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="showLogin()">Login</a>
+        </div>
+      </li>
+      <ng-template #logguedIn>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-user"></i> {{parameters[2].value}}
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="userService.logout()">Log Out</a>
+        </div>
+      </li>
+      </ng-template>
     </ul>
   </links>
 </mdb-navbar>
+
+<app-login></app-login>
 
 

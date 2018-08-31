@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
+import {AppComponent} from '../../app.component';
+import {MDBBootstrapModulesPro} from '../../../../ng-uikit-pro-standard';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +11,15 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      imports: [
+        MDBBootstrapModulesPro
+      ],
+      declarations: [
+        AppComponent
+      ],
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

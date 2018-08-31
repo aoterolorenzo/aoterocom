@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 
@@ -28,6 +28,13 @@ import { ExperienceComponent } from './main/content/home/experience/experience.c
 import { BlogComponent } from './main/content/blog/blog.component';
 import {AppRoutingModule} from './app-routing.module';
 import { ProjectsComponent } from './main/content/projects/projects.component';
+import { LoginComponent } from './auth/login/login.component';
+import {CognitoUtil} from './aws/cognito.service';
+import {AwsUtil} from './aws/aws.service';
+import {DynamoDBService} from './aws/ddb.service';
+import {UserParametersService} from './aws/user-parameters.service';
+import {UserLoginService} from './aws/user-login.service';
+import {UserRegistrationService} from './aws/user-registration.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +53,8 @@ import { ProjectsComponent } from './main/content/projects/projects.component';
     PreloaderComponent,
     ExperienceComponent,
     BlogComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
@@ -61,6 +69,7 @@ import { ProjectsComponent } from './main/content/projects/projects.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     ParticlesModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
@@ -69,7 +78,15 @@ import { ProjectsComponent } from './main/content/projects/projects.component';
       apiKey: 'AIzaSyCodAwA7RGboaeG73PGSSe8RSFXfA6hhyQ'
     })
   ],
-  providers: [MDBSpinningPreloader, AppService],
+  providers: [
+    MDBSpinningPreloader,
+    AppService,
+    CognitoUtil,
+    AwsUtil,
+    DynamoDBService,
+    UserRegistrationService,
+    UserLoginService,
+    UserParametersService],
   bootstrap: [AppComponent],
   schemas:      [ NO_ERRORS_SCHEMA ]
 })
