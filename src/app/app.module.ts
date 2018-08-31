@@ -34,7 +34,6 @@ import {AwsUtil} from './aws/aws.service';
 import {DynamoDBService} from './aws/ddb.service';
 import {UserParametersService} from './aws/user-parameters.service';
 import {UserLoginService} from './aws/user-login.service';
-import {UserRegistrationService} from './aws/user-registration.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +83,6 @@ import {UserRegistrationService} from './aws/user-registration.service';
     CognitoUtil,
     AwsUtil,
     DynamoDBService,
-    UserRegistrationService,
     UserLoginService,
     UserParametersService],
   bootstrap: [AppComponent],

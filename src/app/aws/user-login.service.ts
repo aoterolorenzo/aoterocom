@@ -27,13 +27,13 @@ export class UserLoginService {
             clientParams.endpoint = environment.sts_endpoint;
         }
         const sts = new STS(clientParams);
-        sts.getCallerIdentity(function (err, data) {
+        sts.getCallerIdentity(function () {
             // console.log('UserLoginService: Successfully set the AWS credentials');
             callback.cognitoCallback(null, session);
         });
     }
 
-    private onLoginError = (callback: CognitoCallback, err) => {
+    private onLoginError = (callback: CognitoCallback, err: any) => {
         callback.cognitoCallback(err.message, null);
     }
 
@@ -58,16 +58,18 @@ export class UserLoginService {
         const cognitoUser = new CognitoUser(userData);
         // console.log('UserLoginService: config is ' + AWS.config);
         cognitoUser.authenticateUser(authenticationDetails, {
-            newPasswordRequired: (userAttributes, requiredAttributes) => callback.cognitoCallback(`User needs to set password.`, null),
+            newPasswordRequired: () => {
+              callback.cognitoCallback(`User needs to set password.`, null);
+            },
             onSuccess: result => this.onLoginSuccess(callback, result),
             onFailure: err => this.onLoginError(callback, err),
-            mfaRequired: (challengeName, challengeParameters) => {
-                callback.handleMFAStep(challengeName, challengeParameters, (confirmationCode: string) => {
+            mfaRequired: () => {
+              /*callback.handleMFAStep(challengeName, challengeParameters, (confirmationCode: string) => {
                     cognitoUser.sendMFACode(confirmationCode, {
                         onSuccess: result => this.onLoginSuccess(callback, result),
                         onFailure: err => this.onLoginError(callback, err)
                     });
-                });
+                });*/
             }
         });
     }
@@ -122,12 +124,12 @@ export class UserLoginService {
 
     isAuthenticated(callback: LoggedInCallback) {
         if (callback == null)
-            throw('UserLoginService: Callback in isAuthenticated() cannot be null');
+            throw new Error(('UserLoginService: Callback in isAuthenticated() cannot be null'));
 
         const cognitoUser = this.cognitoUtil.getCurrentUser();
 
         if (cognitoUser != null) {
-            cognitoUser.getSession(function (err, session) {
+            cognitoUser.getSession(function (err: any, session: any) {
                 if (err) {
                     // console.log('UserLoginService: Couldn\'t get the session: ' + err, err.stack);
                     callback.isLoggedIn(err, false);
