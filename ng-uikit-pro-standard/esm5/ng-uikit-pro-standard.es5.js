@@ -14639,7 +14639,7 @@ var MdbInputDirective = /** @class */ (function () {
             this.renderer.addClass(this.wrongTextContainer, 'text-danger');
             this.renderer.appendChild(this.el.nativeElement.parentElement, this.wrongTextContainer);
             var /** @type {?} */ textWrong = this.el.nativeElement.getAttribute('personal_data-error');
-            this.wrongTextContainer.innerHTML = (textWrong ? textWrong : 'wrong');
+            this.wrongTextContainer.innerHTML = (textWrong ? textWrong : '');
             this.renderer.setStyle(this.wrongTextContainer, 'visibility', 'hidden');
             // this.rightTextContainer = this.renderer.createElement(this.el.nativeElement.parentElement, 'span');
             this.rightTextContainer = this.renderer.createElement('span');
@@ -14647,7 +14647,7 @@ var MdbInputDirective = /** @class */ (function () {
             this.renderer.addClass(this.rightTextContainer, 'text-success');
             this.renderer.appendChild(this.el.nativeElement.parentElement, this.rightTextContainer);
             var /** @type {?} */ textSuccess = this.el.nativeElement.getAttribute('personal_data-success');
-            this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : 'success');
+            this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : '');
             this.renderer.setStyle(this.rightTextContainer, 'visibility', 'hidden');
         }
     };
@@ -14921,13 +14921,13 @@ var InputValidateDirective = /** @class */ (function () {
         this._renderer.setElementClass(this.wrongTextContainer, 'inputVal', true);
         this._renderer.setElementClass(this.wrongTextContainer, 'text-danger', true);
         var /** @type {?} */ textWrong = this._elRef.nativeElement.getAttribute('personal_data-error');
-        this.wrongTextContainer.innerHTML = (textWrong ? textWrong : 'wrong');
+        this.wrongTextContainer.innerHTML = (textWrong ? textWrong : '');
         this._renderer.setElementStyle(this.wrongTextContainer, 'visibility', 'hidden');
         this.rightTextContainer = this._renderer.createElement(this._elRef.nativeElement.parentElement, 'span');
         this._renderer.setElementClass(this.rightTextContainer, 'inputVal', true);
         this._renderer.setElementClass(this.rightTextContainer, 'text-success', true);
         var /** @type {?} */ textSuccess = this._elRef.nativeElement.getAttribute('personal_data-success');
-        this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : 'success');
+        this.rightTextContainer.innerHTML = (textSuccess ? textSuccess : '');
         this._renderer.setElementStyle(this.rightTextContainer, 'visibility', 'hidden');
     };
     /**
