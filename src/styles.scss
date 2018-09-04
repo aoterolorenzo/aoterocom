@@ -134,16 +134,17 @@ label {
   color: #a35d5a !important;
 }
 
-.contact-info {
+.icon-listing {
   padding-left: 0;
   list-style: none;
-  :last-child{
+  :last-child {
     margin-bottom: 0;
   }
+  li {
+    margin-bottom: 42px;
+  }
 }
-.contact-info>li {
-  margin-bottom: 42px;
-}
+
 .no-margin{
   margin: 0 !important;
 }
@@ -248,3 +249,34 @@ label {
 .aocolor{
   background: #284c84;
 }
+.modal-dialog {
+  margin: 5rem auto
+}
+.modal-body{
+  margin: 2rem 0;
+}
+@media (min-width: 576px){
+
+          .modal-dialog.wide {
+            max-width: 550px;
+          }
+
+}
+
+.don-row{
+  padding: 40px;
+  padding-top: 0;
+}
+
+@media (max-width: 576px) {
+  #ethereum-address, #bitcoin-address, #btc-copy-button, #eth-copy-button {
+    font-size: 12px;
+  }
+
+  .don-row{
+    padding: 40px 10px;
+  }
+}
+
+
+

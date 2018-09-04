@@ -22,7 +22,10 @@ export const environment = {
   cognito_identity_endpoint: '',
   sts_endpoint: '',
   dynamodb_endpoint: '',
-  s3_endpoint: ''
+  s3_endpoint: '',
+
+  bitcoin_wallet: '1Pgw4o2XXZuAn5AGtuYiFLaqxAGqCq3HQQ',
+  ethereum_wallet: '0xa2d84D0573F42fae4dF0ED2f32e0234D75687c61',
 };
 
 /*

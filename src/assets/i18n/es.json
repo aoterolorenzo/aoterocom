@@ -32,6 +32,14 @@
   "Soon": "Muy pronto",
   "Your password": "Contraseña",
   "Login": "Login",
-  "Logout": "Salir"
+  "Logout": "Salir",
+  "Copied!": "Copiado!",
+  "Copy": "Copiar",
+  "Bitcoin Wallet": "Cartera Bitcoin",
+  "Ethereum Wallet": "Cartera Ethereum",
+  "All fields are required": "Todos los campos son obligatorios",
+  "User does not exist.": "El usuario no existe.",
+  "Missing required parameter USERNAME": "Todos los campos son obligatorios",
+  "Incorrect username or password.": "Nombre de usuario o contraseña incorrectos."
 
 }

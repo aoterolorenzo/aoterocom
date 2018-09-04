@@ -32,6 +32,13 @@
   "Soon": "Moi pronto",
   "Your password": "Contrasinal",
   "Login": "Login",
-  "Logout": "Saír"
-
+  "Logout": "Saír",
+  "Copied!": "Copiado!",
+  "Copy": "Copiar",
+  "Bitcoin Wallet": "Moedeiro Bitcoin",
+  "Ethereum Wallet": "Moedeiro Ethereum",
+  "All fields are required": "Todos os campos son obrigatorios",
+  "User does not exist.": "O usuario non existe.",
+  "Missing required parameter USERNAME": "Todos os campos son obrigatorios",
+  "Incorrect username or password.": "Nome de usuario ou contrasinal incorrectos."
 }

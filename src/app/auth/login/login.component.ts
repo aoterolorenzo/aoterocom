@@ -3,6 +3,7 @@ import {ChallengeParameters, CognitoCallback, LoggedInCallback} from '../../aws/
 import {Router} from '@angular/router';
 import {DynamoDBService} from '../../aws/ddb.service';
 import {UserLoginService} from '../../aws/user-login.service';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class LoginComponent implements CognitoCallback, LoggedInCallback, OnInit
 
   constructor(public router: Router,
               public ddb: DynamoDBService,
-              public userService: UserLoginService) {
+              public userService: UserLoginService,
+              private translate: TranslateService) {
     // console.log('LoginComponent constructor');
   }
 
@@ -35,7 +37,7 @@ export class LoginComponent implements CognitoCallback, LoggedInCallback, OnInit
   onLogin() {
     $('#login-submit').fadeOut(100).fadeIn();
     if (this.email == null || this.password == null) {
-      this.errorMessage = 'All fields are required';
+      this.errorMessage = this.translate.instant('All fields are required');
       return;
     }
     this.errorMessage = null;

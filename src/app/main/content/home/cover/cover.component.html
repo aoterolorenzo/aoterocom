@@ -15,8 +15,8 @@
                   </a>
                 </h1>
               </div>
-              <div class="social-wrapper wow fadeInUp">
-                <ul class="social-icons icon-circle icon-rotate contact-info list-inline">
+              <div class="t1-wrapper wow fadeInUp">
+                <ul class="t1-icons icon-circle icon-rotate icon-listing list-inline">
 
 
                   <li *ngFor="let i of sociallinks">
@@ -29,7 +29,19 @@
           </div>
         </div>
       </div>
-
+      <div class="donation-wrapper wow fadeInUp" style="position:absolute;right: 0;bottom: 0;">
+        <ul class="t1-icons icon-circle icon-rotate icon-listing list-inline">
+            <li>
+              <a (click)="showBitcoinModal()"><i class="fab fa-btc"></i></a>
+            </li>
+            <li>
+                <a (click)="showEthereumModal()"><i class="fab fa-ethereum"></i></a>
+            </li>
+            <li>
+              <a href="https://paypal.me/AlbertoOtero" target="_blank"><i class="fab fa-paypal"></i></a>
+            </li>
+        </ul>
+        </div>
     </div>
   </div>
 </section>

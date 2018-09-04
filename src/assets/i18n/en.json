@@ -32,5 +32,13 @@
   "Soon": "Soon",
   "Your password": "Your password",
   "Login": "Login",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Copied!": "Copied!",
+  "Copy": "Copy",
+  "Bitcoin Wallet": "Bitcoin Wallet",
+  "Ethereum Wallet": "Ethereum Wallet",
+  "All fields are required": "All fields are required",
+  "User does not exist.": "User does not exist.",
+  "Missing required parameter USERNAME": "All fields are required",
+  "Incorrect username or password.": "Incorrect username or password."
 }

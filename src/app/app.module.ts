@@ -34,6 +34,8 @@ import {AwsUtil} from './aws/aws.service';
 import {DynamoDBService} from './aws/ddb.service';
 import {UserParametersService} from './aws/user-parameters.service';
 import {UserLoginService} from './aws/user-login.service';
+import { BitcoinComponent } from './main/modals/bitcoin/bitcoin.component';
+import { EthereumComponent } from './main/modals/ethereum/ethereum.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import {UserLoginService} from './aws/user-login.service';
     ExperienceComponent,
     BlogComponent,
     ProjectsComponent,
-    LoginComponent
+    LoginComponent,
+    BitcoinComponent,
+    EthereumComponent
   ],
   imports: [
     HttpClientModule,

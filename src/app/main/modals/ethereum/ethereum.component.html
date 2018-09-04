@@ -1,0 +1,36 @@
+<div class="modal show" id="ethereum-modal" tabindex="-1" role="dialog" style="padding-left: 0;">
+  <div class="modal-dialog wide" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold" translate><i class="fab fa-ethereum"></i> Ethereum Wallet</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" (click)="selfHide()">×</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" >
+        <div class="row don-row">
+
+              <div class="col-2 col-md-1" style="padding: 9px 12px;border: 1px solid #dddddd;margin:  0;align-items:  right;align-content: right;">
+              <span style="align-self: right;">
+                <i class="fab fa-ethereum"></i>
+              </span>
+              </div>
+              <div class="col-10 col-md-11" style="padding: 10px 0;margin: 0;background-color: #dddddd;height: 100%;width: 100%;">
+                <div style="height:  100%;width: 100%;">
+                  <span id="ethereum-address">{{ethereumWallet}}</span>
+                </div>
+              </div>
+            </div>
+
+        <div class="row">
+
+          <button id="eth-copy-button" style="margin: auto;box-shadow:  none;padding: 0.74rem 1.64rem" type="button" class="btn sticky-bottom blue darken-ao waves-light"
+                  (click)="copyWalletAddress()" translate mdbWavesEffect>
+            <i class="fas fa-clipboard"></i> <span translate> Copiar</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

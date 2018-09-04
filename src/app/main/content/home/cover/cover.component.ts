@@ -134,4 +134,11 @@ export class CoverComponent implements OnInit {
 
   }
 
+  showBitcoinModal() {
+    $('#bitcoin-modal').fadeIn();
+  }
+
+  showEthereumModal() {
+    $('#ethereum-modal').fadeIn();
+  }
 }
