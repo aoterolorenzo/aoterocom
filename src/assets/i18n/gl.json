@@ -54,7 +54,7 @@
   "<b>Panel de control para socios</b> donde ver estadísticas de transferencia, datos de acceso e usuario, SNR en directo da conexión wifi, e xestión de pagos automátizados con PayPal (a asociación esixía unha cuota de uns 16€/mes)",
   "adminside":
   "<b>Portal de administración</b>, no cal ver todo tipo de detalles dos socios, como dispositivos conectados (por mac), potencia, ruido e sinais, e donde poder xestionar, banear, enviar avisos, etc... aos mesmos",
-  "allofthis": "Todo esto xunto con:",
+  "allofthis": "Todo isto xunto con:",
   "customized": "Distribución personalizada e compilada dende fontes modificadas por min de <a href=\"https://openwrt.org/\">OpenWRT</a> nos puntos de acceso WIFI, con un portal cautivo <a href='https://coova.github.io/'>Coova</a>",
   "against": "Autenticación mediante un <b>servidor RADIUS</b> contra un sistema <a href='https://freeradius.org/'>FreeRADIUS</a> e unha base de datos MySQL",
   "paypalreg": "Rexistro por invitación ou <b>pago mediante PayPal</b>",
@@ -62,7 +62,7 @@
   "secondaryserver":
   "Servidor secundario <b>(serivdor de emerxencia)</b> en outra ubicación dentro da rede, con acceso dende una terceira ADSL",
   "admansys": "Sistema de administración e xestión",
-  "admin1": "O <b>panel de administración</b> consistía nunha serie de scripts que <b>unificaban as sesións wifi físicas de cada socio nos nosos puntos de acceso (contra una base de datos mysql)</b>, con sesións de explorador en todo o noso sistema (desde a rede social, hasta a nube, o utorrent...). Ademáis, o noso servidor <b>facía scrapping en tempo real de estadísticas e datos nos propios puntos de acceso </b> (sesións de clientes, ruidos e sinais, dispositivos conectados, macs...), e comprobaba a cada instante o estado online de los mismos, todo esto para poder comprobar o consumo de datos dos socios e AP's e os tempos de caída de cada un. No panel de administración, <b>os socios podían ver o SNR co que estaban conectados á rede en tempo real, datos de transferencia, historial de dispositivos, datos de usuario, estado das contas...</b>. Incluso implementei unha pasarela de pago con paypal para que cada socio poidese pagar directamente online, configurar un pago periódico... O servidor baneaba automáticamente aos socios tras 15 días de retraso no pago.",
+  "admin1": "O <b>panel de administración</b> consistía nunha serie de scripts que <b>unificaban as sesións wifi físicas de cada socio nos nosos puntos de acceso (contra una base de datos mysql)</b>, con sesións de explorador en todo o noso sistema (desde a rede social, hasta a nube, o utorrent...). Ademáis, o noso servidor <b>facía scrapping en tempo real de estadísticas e datos nos propios puntos de acceso </b> (sesións de clientes, ruidos e sinais, dispositivos conectados, macs...), e comprobaba a cada instante o estado online de los mismos, todo isto para poder comprobar o consumo de datos dos socios e AP's e os tempos de caída de cada un. No panel de administración, <b>os socios podían ver o SNR co que estaban conectados á rede en tempo real, datos de transferencia, historial de dispositivos, datos de usuario, estado das contas...</b>. Incluso implementei unha pasarela de pago con paypal para que cada socio poidese pagar directamente online, configurar un pago periódico... O servidor baneaba automáticamente aos socios tras 15 días de retraso no pago.",
   "admin2": "Nos, como administradores, tiñamos un panel un pouco diferente onde ver toda a información dos socios en una única páxina e onde poder <b>banear, cambiar o xestionar todo </b>, ademáis de onde poder obter toda a súa información de sesións, dispositivos, tráfico consumido... Tamén tiñamos un dashboard onde ver o estado de operatividad de todos os nosos puntos de acceso de una forma gráfica",
   "admin3": "Toda a programación e o scripting foi realizado en PHP e Javascript, axudada por algúns scripts en bash e apéndices en outras linguaxes.",
   "RsC Portal": "RsC Portal",
@@ -73,7 +73,7 @@
   "cloud1": "Ofrecíamos <b>+50Gb de almacenamiento na nube</b> a cada socio no noso Owncloud (un CMS do estilo de Dropbox/GDrive/OneDrive). Tiñamos tamén certas carpetas comúns accesibles a todos os socios con unha cuota de espacio moi superior, onde podían compartir contidos e descargas entre eles (todo o que se descargaba do noso utorrent iba a parar alí)",
   "cloud2": "O noso owncloud tamén foi <b>modificado por mim, añadíndolle ao mesmo un sistema de streaming (Subsonic)</b> onde os socios podían ver calquier contido multimedia tanto da súa nube como das carpetas comúns a través do portal. Como mencionei antes, tamén províamos un servidor uTorrent co seu correspondente webgui multiusuario, para descargar contidos p2p directamente ás carpetas comúns.",
 
-  "This is a": "Esto é un",
+  "This is a": "isto é un",
   "project": "proxecto",
   "withapi": "Con unha <b>API con DJango REST API</b>",
   "internalstats": "Usa <b>estadísticas</b> proveídas diariamente e en directo pola API de mysportsfeeds.com",
@@ -81,12 +81,12 @@
   "prealpha": "O backend está nun punto avanzado con unha <b>versión prealfa totalmente funcional</b>",
   "What is exactly ComuNiBA?": "Que é ComuNiBA?",
   "(final name pending)": "(nome pendente de rev)",
-  "comunibadesc": "<b>ComuNiBA é un manager online de baloncesto (NBA)</b> basado en estadísticas reais. Pódese dicir que é similar a un Fantasy pero non exactamente co mismo comportamento. Algo máis como un \"<a href=\"http://www.comunio.es/\">Comunio</a>\". Existe un mercado no que se van publicando subastas de xogadores, onde os usuarios teñen a posibilidade de puxar para facerse con eles. O usuario vai creando un equipo cos xogadores gañaados nas devanditas puxas e comprados a outros xogadores. Cada semana, dependendo das actuacións de cada xogador na vida real, ganaránse puntos e diñeiro para poder ir avanzando no xogo. Este é o resumen básico, pero obviamente existen moitas máis características, como intercambios de xogadores, ventas ao propio \"computer\", estadisticas en directo de xogadores e equipos, distintas opcións de configuración de equipo e liga, etc...",
+  "comunibadesc": "<b>ComuNiBA é un manager online de baloncisto (NBA)</b> basado en estadísticas reais. Pódese dicir que é similar a un Fantasy pero non exactamente co mismo comportamento. Algo máis como un \"<a href=\"http://www.comunio.es/\">Comunio</a>\". Existe un mercado no que se van publicando subastas de xogadores, onde os usuarios teñen a posibilidade de puxar para facerse con eles. O usuario vai creando un equipo cos xogadores gañaados nas devanditas puxas e comprados a outros xogadores. Cada semana, dependendo das actuacións de cada xogador na vida real, ganaránse puntos e diñeiro para poder ir avanzando no xogo. Este é o resumen básico, pero obviamente existen moitas máis características, como intercambios de xogadores, ventas ao propio \"computer\", estadisticas en directo de xogadores e equipos, distintas opcións de configuración de equipo e liga, etc...",
   "Sources are private": "O código fonte es privado",
-  "private": "Sintoo, pero <b>esto é un proxecto persoal con espectativas de negocio</b>, polo que o código fonte non está accesible de forma pública",
+  "private": "Sintoo, pero <b>isto é un proxecto persoal con espectativas de negocio</b>, polo que o código fonte non está accesible de forma pública",
 
-  "This is": "Esto é",
-  "notstatic": "Esto non é simplemente un sitio web estático. Tampoco un template prefabricado. Esto é:",
+  "This is": "isto é",
+  "notstatic": "isto non é simplemente un sitio web estático. Tampoco un template prefabricado. isto é:",
   "fullmean": "Un aplicativo <b>Full MEAN Stack</b>",
   "seeded": "Backend con unha <b>REST API by MongoDB + Express + Node</b>",
   "angfrontend": "Frontend en <b>Angular 6</b>",
