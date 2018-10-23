@@ -7,8 +7,7 @@
   <links>
     <ul class="navbar-nav">
       <li class="nav-item dropdown" dropdown>
-        <span routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" style="display: none;"></span>
-        <a id="ddmain" dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect translate>
+        <a id="home" dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect translate>
           Resume<span class="caret"></span><span class="sr-only">(current)</span></a>
         <hr class="whitefade no-margin no-padding" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <div *dropdownMenu class="dropdown-menu dropdown" role="menu">
@@ -27,19 +26,21 @@
              [pageScrollDuration]="800" mdbPageScroll translate>Get in touch</a>
         </div>
       </li>
-      <li class="nav-item">
-        <i style="    float: right;
-    position: absolute;
-    color: red;
-    font-size: 10px;" translate>Soon</i>
-        <a class="nav-link waves-light" mdbWavesEffect translate>Projects</a>
-        <hr class="whitefade no-margin no-padding">
+      <li class="nav-item dropdown" dropdown>
+        <a id="projects" dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect translate>
+          Projects<span class="caret"></span><span class="sr-only">(current)</span></a>
+        <hr class="whitefade no-margin no-padding" routerLink="/projects/aoterocom" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <div *dropdownMenu class="dropdown-menu dropdown" role="menu">
+          <a routerLink="/projects/aoterocom"  class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll
+             [pageScrollDuration]="800" [pageScrollOffset]="90" href="#aoterocom" translate>Personal Website</a>
+          <a routerLink="/projects/comuniba" class="dropdown-item waves-light" mdbWavesEffect mdbPageScroll [pageScrollDuration]="800"
+             [pageScrollOffset]="65" href="#resume" translate>ComuNiBA</a>
+          <a routerLink="/projects/rianxosencabos" class="dropdown-item waves-light" mdbWavesEffect  href="#footer"
+             [pageScrollDuration]="800" mdbPageScroll translate>RianxoSenCabos</a>
+        </div>
       </li>
       <li class="nav-item">
-        <i style="    float: right;
-    position: absolute;
-    color: red;
-    font-size: 10px;" translate>Soon</i>
+        <i class="soon-banner" translate>Soon</i>
         <a class="nav-link waves-light" mdbWavesEffect translate>Blog</a>
         <hr class="whitefade no-margin no-padding">
       </li>
@@ -50,28 +51,25 @@
         <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           <i class="fa fa-globe"></i>
         </a>
-        <div *dropdownMenu class="dropdown-menu dropdown" style="min-width: 0;width: 126px;left: -50px;top:-4px" role="menu">
+        <div *dropdownMenu class="dropdown-menu dropdown lang-dropdown" role="menu">
 
-          <div class="view zoom"
-               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
+          <div class="view zoom lang-icon"
                mdbWavesEffect (click)="switchLanguage('en')">
-            <img id="ukflag" style="width: 28px;padding: 0;display: inline"
+            <img id="ukflag" class="flag"
                  src="/assets/icon/uk.png"/>
           </div>
 
-          <div class="view zoom"
-               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
+          <div class="view zoom lang-icon"
                mdbWavesEffect (click)="switchLanguage('es')">
 
-            <img id="spainflag" style="width: 28px;padding: 0;display: inline"
+            <img id="spainflag" class="flag"
                  src="/assets/icon/es.png"/>
           </div>
 
-          <div class="view zoom"
-               style="margin-top: 0;margin-bottom: 0;padding: 0 4px;cursor:pointer;display: inline"
+          <div class="view zoom lang-icon"
                mdbWavesEffect (click)="switchLanguage('gl')">
 
-            <img id="galicianflag" style="width: 28px;padding: 0;display: inline"
+            <img id="galicianflag" class="flag"
                  src="/assets/icon/gl.png"/>
           </div>
 

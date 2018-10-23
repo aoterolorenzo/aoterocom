@@ -58,6 +58,35 @@ span.active + #ddmain{
   color: #fff !important;
 }
 
+.soon-banner{
+  float: right;
+  position: absolute;
+  color: red;
+  font-size: 10px;
+}
+
+.lang-dropdown{
+  min-width: 0;
+  width: 126px;
+  left: -50px;
+  top:-4px
+}
+
+.lang-icon{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 4px;
+  cursor:pointer;
+  display: inline
+}
+
+.flag{
+  width: 28px;
+  padding: 0;
+  display: inline
+}
+
+
 /*.rd:hover > #resume-menu-dropdown {
   display: block;
 }*/

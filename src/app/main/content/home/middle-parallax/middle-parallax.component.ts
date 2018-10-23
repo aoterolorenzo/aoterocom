@@ -11,7 +11,6 @@ export class MiddleParallaxComponent implements OnInit {
   @Input() imgURL: string; // time to wait after finish typing to start deleting the current string
   @Input() height: string;
   style: object;
-  datajarallax: string;
 
   constructor() { }
 
@@ -22,7 +21,6 @@ export class MiddleParallaxComponent implements OnInit {
       'background-repeat': 'no-repeat',
        'background-size': 'cover',
       'background-position': 'center center'};
-    this.datajarallax = 'test';
   }
 
 }

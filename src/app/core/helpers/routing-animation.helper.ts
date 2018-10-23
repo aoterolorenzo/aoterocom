@@ -8,7 +8,8 @@ export class RoutingAnimationHelper implements AfterViewInit, OnDestroy {
     $('.navbar')
       .removeClass('scrolling-navbar')
       .addClass('top-nav-collapse');
-    $('main').hide().fadeIn();
+    $('footer').fadeIn();
+
 
   }
 
@@ -16,8 +17,7 @@ export class RoutingAnimationHelper implements AfterViewInit, OnDestroy {
     $('.navbar')
       .addClass('scrolling-navbar')
       .removeClass('top-nav-collapse');
-    $('main').hide().fadeIn();
-
+    $('footer').hide();
   }
 
 }

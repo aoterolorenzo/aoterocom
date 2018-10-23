@@ -1,5 +1,5 @@
 <section id="cover">
-  <div id="cover-jarallax" class="view jarallax cover-jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://i.imgur.com/XP10AR9.jpg');">
+  <div id="cover-jarallax" class="view jarallax cover-jarallax" data-jarallax='{"speed": 0.2}'>
     <div class="mask rgba-black-strong">
 
       <div id="particles-js"></div>
@@ -8,7 +8,7 @@
         <div class="row mt-5">
           <div class="col-md-12 wow fadeIn mb-3">
             <div class="home-content home-content-fullwidth">
-              <div class="wow fadeInDown"><h3 style="text-transform: none;" translate>Hi, I'm</h3>
+              <div class="wow fadeInDown"><h3 id="hi" translate>Hi, I'm</h3>
                 <h1 class="header-title-text type-animate">
                   <a href="" class="typewrite">
                     <app-typewritter [data]="typewritterArray"></app-typewritter>
@@ -16,11 +16,11 @@
                 </h1>
               </div>
               <div class="t1-wrapper wow fadeInUp">
-                <ul class="t1-icons icon-circle icon-rotate icon-listing list-inline">
+                <ul class="t1-icons icon-circle icon-rotate ico-list list-inline">
 
 
                   <li *ngFor="let i of sociallinks">
-                    <a [href]="i['link'] | safeHtml" target="_blank"><i [class]="i['icon']"></i></a>
+                    <a [href]="i['link'] | sanitizeT: 'url'" target="_blank"><i [class]="i['icon']"></i></a>
                   </li>
 
                 </ul>
@@ -29,8 +29,8 @@
           </div>
         </div>
       </div>
-      <div class="donation-wrapper wow fadeInUp" style="position:absolute;right: 0;bottom: 0;">
-        <ul class="t1-icons icon-circle icon-rotate icon-listing list-inline">
+      <div class="donation-wrapper wow fadeInUp">
+        <ul class="t1-icons icon-circle icon-rotate ico-list list-inline">
             <li>
               <a (click)="showBitcoinModal()"><i class="fab fa-btc"></i></a>
             </li>

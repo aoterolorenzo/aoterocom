@@ -1,5 +1,5 @@
 <section id="footer">
-  <div class="container white-text" style="padding-top: 3rem">
+  <div class="container white-text ao-col">
     <!--Section heading-->
     <h2  class="h1-responsive text-center font-weight-bold my-4 wow fadeInDown ">
       <i class="far fa-envelope" aria-hidden="true"></i> <span translate> Get in touch</span>
@@ -9,15 +9,15 @@
     <div class="row">
 
       <div class="col-md-8 col-lg-5 padding-3-1">
-        <div id="map-container-7" class="z-depth-1-half map-container" style="height: 300px;">
-          <agm-map [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom" [styles]="map.styles" style="height: 300px;">
+        <div id="map-container-7" class="z-depth-1-half map-container">
+          <agm-map class="agm-map" [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom" [styles]="map.styles">
             <!--<agm-marker [latitude]="map.marker.lat" [longitude]="map.marker.lng"></agm-marker>-->
           </agm-map>
         </div>
       </div>
 
       <div class="col-md-4 col-lg-2 padding-3-1" align="center">
-        <ul class="icon-listing" style="margin-bottom: 0;">
+        <ul class="ico-list">
           <li>
             <i class="{{contact_icons[0]['icon-class']}}"></i>
             <p>{{contact_icons[0]['text']}}</p>
@@ -42,7 +42,7 @@
 
           <!-- Grid column -->
           <div class="col-md-6">
-            <div class="md-form" style="margin-top: 0">
+            <div class="md-form">
               <input type="text" id="form-contact-name" [mdbValidate]="false" class="form-control" mdbInputDirective>
               <label for="form-contact-name" class="" translate>Your name</label>
             </div>
@@ -51,7 +51,7 @@
 
           <!-- Grid column -->
           <div class="col-md-6">
-            <div class="md-form" style="margin-top: 0">
+            <div class="md-form">
               <input type="email" id="form-contact-email" class="form-control" mdbInputDirective>
               <label for="form-contact-email" class="" translate>Your email</label>
             </div>
@@ -92,9 +92,9 @@
           <div class="col-md-12">
             <div class="md-form mb-0">
               <textarea type="text" id="form-contact-message" [mdbValidate]="false" class="form-control md-textarea-scroll"
-                        mdbInputDirective rows="3" style="width: 80%;height: 142px;"></textarea>
+                        mdbInputDirective rows="3"></textarea>
               <label for="form-contact-message" id="form-contact-message-label" translate>Message</label>
-              <a class="btn-floating btn-lg blue darken-ao float-right" style="bottom:90px">
+              <a class="btn-floating btn-lg blue darken-ao float-right msg-button">
                 <i class="fa fa-send-o"></i>
               </a>
             </div>

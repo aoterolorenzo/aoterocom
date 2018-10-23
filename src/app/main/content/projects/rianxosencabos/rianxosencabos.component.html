@@ -1,0 +1,200 @@
+<section id="rsc-intro" class="text-center container my-5" style="padding-top: 2rem">
+
+  <!--Grid row-->
+  <div class="row">
+
+    <section id="cornerstone" class="my-5 wow fadeIn" style="padding-bottom: 3rem">
+
+      <mdb-image-modal [modalImages]="imagesBasic" type="no-margin"></mdb-image-modal>
+
+      <!-- Section heading -->
+      <h3  class="h1-responsive text-center font-weight-bold my-4">
+        <i class="fas fa-code"></i> <span translate> This is my cornerstone</span>
+      </h3>
+
+      <hr class="blackfade mb-4">
+
+      <div align="left">
+
+        <p class="e2e-inner-html-interpolated grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('cornerstone1') | sanitizeT: 'html'">
+        </p>
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('cornerstone2')">
+        </p>
+
+        <ul class="w-responsive mx-auto grey-text">
+          <li translate [innerHtml]="this.translate.instant('ownsocial') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('mailserver') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('personalcloud') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('utorrent') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('streamingserver') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('clientside') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('adminside') | sanitizeT: 'html'"></li>
+
+        </ul>
+
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('allofthis') | sanitizeT: 'html'">
+        </p>
+
+        <ul class="w-responsive mx-auto grey-text">
+          <li translate [innerHtml]="this.translate.instant('customized') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('against') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('paypalreg') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('allhosted') | sanitizeT: 'html'"></li>
+          <li translate [innerHtml]="this.translate.instant('secondaryserver') | sanitizeT: 'html'"></li>
+          </ul>
+      </div>
+
+    </section>
+
+    <section id="adminsite" class="my-5 wow fadeIn"  style="padding-bottom: 3rem">
+
+      <mdb-carousel [animation]="'fade'" class="carousel slide carousel-fade">
+
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/estadisticaspersoais.png" alt="First slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/estadoaps2.png" alt="Third slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/membersadmin.png" alt="Second slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/datoscliente3.png" alt="Third slide">
+        </mdb-slide>
+
+
+      </mdb-carousel>
+      <!-- Section heading -->
+      <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeIn">
+        <i class="fas fa-users-cog"></i> <span translate> Admin and management system</span>
+      </h3>
+
+      <hr class="blackfade mb-5">
+
+
+      <!-- Section description -->
+      <div align="left">
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('admin1') | sanitizeT: 'html'">
+        </p>
+
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('admin2') | sanitizeT: 'html'">
+        </p>
+
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('admin3') | sanitizeT: 'html'">>
+        </p>
+
+
+      </div>
+
+    </section>
+
+    <section id="portal" class="my-5 wow fadeIn"  style="padding-bottom: 3rem">
+
+
+
+      <div class="card card-cascade wider reverse wow fadeIn">
+        <div class="view view-cascade overlay card-img-top" style="height: 400px;
+        background: url('/assets/img/rsc/diaspora3.png');
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover">
+        </div>
+      </div>
+
+      <!-- Section heading -->
+      <h3  class="h1-responsive text-center font-weight-bold my-4 wow fadeIn">
+        <i class="fas fa-home"></i> <span translate> RsC Portal</span>
+      </h3>
+
+      <hr class="blackfade mb-5">
+
+
+      <!-- Section description -->
+      <div align="left">
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('portal1') | sanitizeT: 'html'">
+        </p>
+
+      </div>
+
+    </section>
+
+    <section id="webmail" class="my-5 wow fadeIn"  style="padding-bottom: 3rem">
+
+      <div class="card card-cascade wider reverse wow fadeIn">
+        <div class="view view-cascade overlay card-img-top" style="height: 400px;
+        background: url('/assets/img/rsc/webmail.png');
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover">
+        </div>
+      </div>
+
+      <!-- Section heading -->
+      <h3  class="h1-responsive text-center font-weight-bold my-4">
+        <i class="fas fa-envelope"></i> <span translate> Personal email</span>
+      </h3>
+
+      <hr class="blackfade mb-5">
+
+
+      <!-- Section description -->
+      <div align="left">
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('email1') | sanitizeT: 'html'">>
+        </p>
+
+      </div>
+
+    </section>
+
+    <section id="owncloud" class="my-5 wow fadeIn"  style="padding-bottom: 3rem">
+
+      <!--Carousel Wrapper-->
+
+      <mdb-carousel [animation]="'fade'" class="carousel slide carousel-fade" style="height: 400px;">
+
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/owncloudrsc.png" alt="First slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/owncloud.png" alt="Third slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/subsonic.png" alt="Second slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/utorrent.png" alt="Third slide">
+        </mdb-slide>
+        <mdb-slide>
+          <img class="d-block w-100" src="/assets/img/rsc/downloader.png" alt="Third slide">
+        </mdb-slide>
+
+
+      </mdb-carousel>
+
+      <!--/.Carousel Wrapper-->
+
+
+      <!-- Section heading -->
+      <h3  class="h1-responsive text-center font-weight-bold my-4">
+        <i class="fas fa-cloud"></i><span translate> Cloud storage</span>
+      </h3>
+
+      <hr class="blackfade mb-5">
+
+
+      <!-- Section description -->
+      <div align="left">
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('cloud1') | sanitizeT: 'html'">
+        </p>
+
+        <p class="grey-text text-center w-responsive mx-auto mb-4 text-align-left" translate [innerHtml]="this.translate.instant('cloud2') | sanitizeT: 'html'">
+        </p>
+
+      </div>
+
+    </section>
+  </div>
+</section>
+
+

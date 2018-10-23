@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+a{
+  color: #225eb4;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
 .particles-js-canvas-el{
   position: absolute;
 }
@@ -23,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 hr.blackfade {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
 hr.whitefade {
@@ -134,7 +142,7 @@ label {
   color: #a35d5a !important;
 }
 
-.icon-listing {
+.ico-list {
   padding-left: 0;
   list-style: none;
   :last-child {
@@ -249,6 +257,12 @@ label {
 .aocolor{
   background: #284c84;
 }
+.text-aocolor{
+  color: #225eb4;
+}
+.modal{
+  padding-left: 0;
+}
 .modal-dialog {
   margin: 5rem auto
 }
@@ -278,5 +292,241 @@ label {
   }
 }
 
+.ao-col{
+  padding-top: 3rem
+}
+
+// Crypto modals
+#btc-copy-button, #eth-copy-button {
+  margin: auto;
+  box-shadow:  none;
+  padding: 0.74rem 1.64rem
+}
+
+.address-ln {
+  height:  100%;
+  width: 100%;
+}
+
+.address-col{
+  padding: 10px 0;
+  margin: 0;
+  background-color: #dddddd;
+  height: 100%;
+  width: 100%;
+}
+
+.icon-col{
+  padding: 9px 12px;
+  border: 1px solid #dddddd;
+  margin:  0;
+  align-items:  right;
+  align-content: right;
+}
+
+.crypto-icon{
+  align-self: right;
+}
+
+.ml-6{
+  margin-left: 6rem;
+}
+
+.donation-wrapper{
+  position:absolute;
+  right: 0;bottom: 0;
+}
 
 
+
+.tech-logo{
+  width: 80px;
+  height: 80px;
+  margin: 0.4rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0.8rem solid rgba(0,0,0,0);
+  /*background-color: #0d47a1;*/
+  background-color: #284c84;
+}
+
+.tech-logo.php{
+  background-image: url(http://php.net/images/logos/new-php-logo.svg);
+}
+.tech-logo.c{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEX///8DWZwAUpkASZXq8Pb0+fwAV5sAUJgAVZoAU5kATJYATpcASJQARpMAWp33+vx+nsLA0OHd5u/Q3OnW4expkLq2yNxch7WGpMbj6/Kgt9KrwNePq8pVgrLI1uVJe64UYKAkZ6Mzbqd1mL9YhbSZss4saqVEd6ymvNRvkruxxNqLqMh4mb9P3yVxAAAL5ElEQVR4nO1d61bqPBOWhCZN2lKOAsqhgJWD3v/1feDe7leUJjOTpC2u7/nrAvOQTGYyx4eHGjHo74tOb/t+iOr8r/XhLdZKiE5HxFLOml5MAJyE7PyDkPGp6QV5xnivO9fQ21HTi/KI6JjGne8Q6bTb9MJ8oZTsB78LVPLW9NK8YLDR4ibBizj27l8c50texe+Do96Om16iG2ZaGfhdEPPJHWvHE5OmDfwUR75oeqFEjLffNUTVUU2Kx6YXS0B3kgH275Mj39+dOJbJbQ1RhZgf70ocB0UC38C/YEnZ9LLBmK+NGqIKZ3EcNL10EPIZt2mISo58PWx6+XacGE4ArxFnu5aLI1hDVIKxp6ZJGIDSEJVosTiWCVUAryH4ct40l1sY9PAaogoq6+dN8/kOooaoBGOHpildIe/zn494R+jNqmla/+FZuWiIKsStEceRs4aoguKzFohjd5p6FcBrSPbcNMGF9KMhKqFfG/U6PvYgj3g3xNlLY17HoWcNUQWlmwkC5P3Mu4aoQDNBgEMQDVGJ2oMAq9dQGqIK9QYBulP/JowdStfmdVxY3bxhIGSvFq9jHRqikmMNQYDhvh4NUYXQQYDovTYNUYmgQYCDk5fJF8IFAVabpGlyfxEmCOCsIUSsGJNnMMWUchTmAEGAN7KbtyMUS3jW279MZouyfCoXs/5uuu9lWjMHop6DAI8dooaImU4208Vg+PMlm48fy2lPJ4x4NHwGAYgaQjDNl4uV+TR1B2/bLKHtpa8gwM1UEQA9XrwDf+PoNFU0M8lLEOCJoiHiRPZRb4F8MMkk5bgy5RgEWBUEDcH4mqCw8sMr6TbTLuLYNaeK3IbkO6p0jJYpgaNDEGCG14BCqtJFMoYTCkdiEODUk/bv/v6vkoWrg3M+oZxVQhBgvK/M1aqEp/DmcEnxwCKDANGRYKLpva8Q9aDAHx9cEKAqmdAEJn26w0h+PMWBXsdRgT+gHX70G2EYv1IeMrIHeXMMCD+fSvwHpmeUiHms7RRHBDFP9iE8C6MeRTky61kSaIIi7Qfgd0a+JJxUafNxvKFvMaHDedzfCAdKmb8yRx+MOA7p33vEm43cvJ5n7LlQm7C+9hH6xWG59KbIPWT7oPzOmGMvhsQsNMhvk8EJnh84AreLifHlFuHcMfIlPMEzxQJF0awRI4ZhKNd1EDyvqoOhyI0XA4qhqongeRcxFP0xVK91ETxfN4h1eWMoRJ2prmP4Y8AXQ6HrzVd+TOtmmOG9ad3h4PH5cHg+DUZz/P6/QW0RTwwTXIZLdzBbxwnXiZSJTBKtk2JajnAvyiXQGPHDMMZco6v+a5qob7ehUFIn6yeEyZf3YGvzwzABn7LhTOmq2IuIJd/CT/s4q49hCn3Rr9Y296fQAuyAhImiD4ZsB+S3BXnsJDiLdA/5Oh8MFWhB8Lw+IYHhlTnknHpgyEGiM0M5tJIN6B1dAs6pO0O1BCxlvEF6Q2KYr3NrX587wxTgWS4JHkm9B6iOuX0TnRkygGNtSkpcVMwaVB0u7b+cK0MhrddMviVEHT6+2yLhUR8SenNlKK05Hsgn+RXFzPTtTxoUTXFlGNu2sBu7JBbxyj4S4MJbR4bWLewCrUckxTE84cWNodC2LaQf0c8F3gjmosKZbgyZTWnt3bOHsx+x3AXHhDPdGGqLyur7yF5MrhUuNifZiaGy+EcfuRu3PxCbL1852mIjF04MtfnV1CXEjm9B/nu7dKeEyIzTHpq3EPS4geBTFO29X27AhaEy3zMHb0UmonO5sp9BvV9+wIWhOTKXE221W5B9elWOA8OrG+An+j6z3OWakvL5AQeG5kPa9VerfgFdpB0YamNa1bENhQoX0BkKbfwkzNVXA+gM1dT0yVlbttCBoTT6wxyfFB5BZ6hNPoZB3QWX1SAzFEYvKTaHIyDIDOOt4XO5J4vUB8gM1bvhcy06pHSG0pRI7dWecQSZofGi2TZed/kfyAy5wdUdeXn5egJ9Dw0fW7VIDMkMjQ+LJ48PJ2dQGcamiNN7iy4aMkOjVbpu0UVDZ2hSh0V79D2dITMliMe/gaEpYIHMSg0MMkPD2wmXlRoaQRj+jj00mKX579hDgxzmrh0SvOL/d2klQ9MYg9+hD01JJm16PNHt0onhY5P2eGkCWd6zX8HQ5Ig6taU1zwXkF3DP8LHRr3jjZwZ3ae437uQGup/GVF+x/w0MjYWLby165NP9paZ8r1GLXFF0r75JIT60SBDpkRljFP/YHo1IZ8hMVSSr9ugLh/ihMYzfHuObztD4fnpYtMYpTGdorub6DZkKHW7Mnt21RSW65NMYMxN9JSY6w4GhpdLCb74J/edyyWsrjAx9Zu51JL3du1Nuormm5dmf6cbeL9UHtM+6MLQVBHnLoBUfVR0LWstUF4YiMTOc+7pssj93Gm10hlMWtLltyPmc+rHd2PHzC1eECXVODK0l3BMft83VjVaiU73d6i1MCRkfePUgitf1FugOzY41M7biw657CCP7blisNqij6lr3ZCvEH7uqDH5jdA6qD65r7Zq14/vIzQS/XYEYTeBlt671h/aWdiMXjwav8gaNtlBV5FxDam/bP6Z26O6IzBCHPQAbcjrXAQNaYnQ3NCM8Nr9e8iPIVnWv5TYl1nxiSrFuWM/W1Ge8Bfx0HurxIc2Fngg1Z1NAM4p3u/53ZwjrTTNEdlgFtrAFOLw89MUA9rosU7g0igw2W2UGsAp99DaRsP473SPw+SP4HtaiflhTbxNL9czXFS0zqxUnVLqFNvQB9P3w1GOIg3uyDo9Mm7SjSJIJeMQApHeLJ4Z28/Q/5Kc11zd3UsQJ3x/g3zSHtWzz0wkL1zIxepwUacKUEB3xB7GSSVpMnlHdXTcwU6mZfm2Xjm2L47aIL7N0lCrWu3KAnWcwAV7NDfbcuyCPoojW2vwA9ZDca99EeLrHnfa+RPgO7rN/aY5omXKXPWhRLVM8Mqytj/DDur7uLd8p1tIL+mGK8sKmZiWLdAbWsotLnJvZHMhFJxyE78n+sMYRtPS2eHjB+tBZ4L76EcRxcbUgi5cFn1IRdjbCED3FwxLkhL0xryF0uBG2A7RHS5gyfT+wxkclg80oeVjgR82k1tdmRHHnhpkzk6/xce4E0B53SCnxUQEmsQwIvzVsGsWcMjBL8KnnbdyBm7B/XQTwywkz8y4jn3xu40CgAwOoqd3zFwpH7Wcq6OX/E7JpsJPXSZ224pQ0hvA78hk+zURkE7Tl8RwTxJFJ5/mHeanw/1hvUVNPP//VG6HdsZBx6cIxWuD5CaluRMZBoA2qlvqdOhZ03teEuZka6/f7itErIRAoGF9TRumtlhyvi+OUPGb1L547lCSgWKsZTjJGfUloAykS3GzOm8iJM8cZL/rA/54P+gVh+84H1Nx/DIzuhDJr8WMut16Wlrnc0ahcp5pUDB7znbe5mfBUjx+rkFpuJuWt2eoP88Fiujn/nZa5Ibi3wa4fOFHHx19cx7FMeFrsX46zRVk+lYtZfzfdF5z/CdbQvtTj6PhPvNGmn38hqpRi8gymmCJT+wNmbw1PAFUc/YNiosFwFsemyV2gtwE9Q6e46SYfZxMt3NjTDyySRuvwYm3q7eAH3Qm5w687v/QlrHf2LxBzCvxCv1LeSCRgW917ATN2bvSOhaN2RENlXvwHCHQnlLcjFYKvHd9IFNQnjiFMNBgei1rEMYyJBgRueggJcXasM+njB6LA4uj7jURBSHEUshMucocAeBITFlg3dkCUwFIIFASf1mKiwRAdvRurNDd2QAz3XqvVpaC6sQPCozgqPyEe//AkjoK7urHDIdoRgjnfkRTubuyAgA+QrQADjpVtEOROARfE6a5REw0IVE3rV7TBRIMh2lGCOc29kSgYrtHdEJRu8I1EAVI7Cg4rXmsVgKNfP/gFdWOHQ/4OFEfZCezGDgeQOMZZeDd2QFg7PsSteiORcEhM4ugj06Bx5P1KcWSqVjd2OMyXN91Virf0jUTBWRy/8xOpt1TGduCgrsTxvkw0GPJ+9k8chbw3Ew2G+UTLWIiY8c3T/ZloMHSfp0XxUtYrf/8DjBbhjtRp9hsAAAAASUVORK5CYII=);
+}
+.tech-logo.python{
+  background-image: url(https://robot.isp.imath.be/wp-content/uploads/2015/01/python-logo.png);
+}
+.tech-logo.java{
+  background-image: url(https://sommelierdecafe.com/new/wp-content/uploads/2009/06/java-logo1.png);
+}
+.tech-logo.angular{
+  background-image: url(https://sdtimes.com/wp-content/uploads/2018/04/angular.png);
+}
+.tech-logo.jquery{
+  background-image: url(https://i0.wp.com/entreunosyceros.net/wp-content/uploads/2016/04/jquery-1.png?fit=800%2C800&ssl=1);
+}
+.tech-logo.js{
+  background-image: url(https://qph.fs.quoracdn.net/main-qimg-637ccbf2b702b94a2cf9a3ff6cdd7dc2);
+
+}
+.tech-logo.html5{
+  background-image: url(https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png);
+}
+.tech-logo.css3{
+  background-image: url(https://perezmartin.es/wp-content/uploads/2014/07/css3-logo.png);
+}
+.tech-logo.spring{
+  background-image: url(https://www.opensoft.pt/wp-content/uploads/2016/06/spring.png);
+}
+.tech-logo.hibernate{
+  background-image: url(https://pbs.twimg.com/profile_images/914842431748739072/66NFe2g3_400x400.jpg);
+}
+.tech-logo.sql{
+  background-image: url(https://blogconclase.files.wordpress.com/2016/03/sql.png?w=830);
+}
+.tech-logo.mysql{
+  background-image: url(http://maslinux.es/wp-content/uploads/2018/02/0dd7193f-e747-4a15-b797-818b9fac3656-mysql.png);
+}
+.tech-logo.postgresql{
+  background-image: url(https://d1q6f0aelx0por.cloudfront.net/product-logos/a28dcd12-094d-4248-bfcc-f6fb954c7ab8-postgres.png);
+}
+.tech-logo.sqlite{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRntcb3AnaH36AvGsjssrOIf_t3VVSmquBCAoH3DTzYywcr0Fmk);
+}
+.tech-logo.django{
+  background-image: url(https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/082010/django.png?itok=0caKSSTf);
+}
+.tech-logo.android{
+  background-image: url(https://lospastores.es/wp-content/uploads/2017/03/android-logo.jpg);
+}
+.tech-logo.react{
+  background-image: url(http://quantilus.com/wp-content/uploads/2018/01/react.png);
+}
+.tech-logo.vue{
+  background-image: url(http://www.laraphp.com/wp-content/uploads/2017/10/vuejs-logo.jpg);
+}
+.tech-logo.kotlin{
+  background-image: url(https://ih1.redbubble.net/image.331026256.5654/flat,800x800,070,f.u5.jpg);
+}
+.tech-logo.go{
+  background-image: url(http://cuelogic.com/blog/wp-content/uploads/2017/06/go_lang1.png);
+}
+.tech-logo.mongodb{
+  background-image: url(https://www.troopsf.com/file/mongodb-logo.png);
+}
+.tech-logo.r{
+  background-image: url(https://www.r-project.org/logo/Rlogo.svg);
+}
+.tech-logo.json{
+  background-image: url(https://i0.wp.com/borrowbits.com/wp-content/uploads/2013/03/logo-json-1.jpg?ssl=1);
+}
+.tech-logo.ts{
+  background-image: url(http://blemoine.github.io/typescript-slides/images/typescript-logo.png);
+}
+.tech-logo.aws{
+  background-image: url(https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/102017/logo_0.png?17TK91b1B6OvV2MFrCLfukw1c8oEaNr6&itok=vsanFiUj);
+}
+
+.tech-fa{
+  background:  none;
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 1px 2px #212121;
+}
+.tech-icon-tittle{
+  color:  white;
+  font-size: 11px;
+  margin-top: 5px;
+  text-shadow: 0 1px 2px #212121;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/font/icomoon.eot?cdcte8');
+  src:  url('./assets/font/icomoon.eot?cdcte8#iefix') format('embedded-opentype'),
+  url('./assets/font/icomoon.ttf?cdcte8') format('truetype'),
+  url('./assets/font/icomoon.woff?cdcte8') format('woff'),
+  url('./assets/font/icomoon.svg?cdcte8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-postgresql2:before {
+  content: "\e90a";
+}
+.icon-django:before {
+  content: "\e902";
+}
+.icon-postgresql:before {
+  content: "\e903";
+}
+.icon-jquery:before {
+  content: "\e905";
+}
+.icon-ts:before {
+  content: "\e906";
+}
+.icon-mongodb:before {
+  content: "\e907";
+}
+.icon-sqlite:before {
+  content: "\e908";
+}
+.icon-mysql:before {
+  content: "\e909";
+}
+.icon-go:before {
+  content: "\e900";
+}
+.icon-spring:before {
+  content: "\1f304";
+}
+.icon-kotlin:before {
+  content: "\e901";
+}
+.icon-hibernate:before {
+  content: "\e904";
+}
+
+.carousel-inner{
+  height: 480px !important;
+}
+
+.carousel-indicators li {
+  background-color: #555 !important;
+}
+
+.carousel-indicators .active{
+  background-color: #999 !important;
+}
+
+.ng-gallery-content > img {
+  transform: scale(0.8, 0.8);
+}
+.zoom-toogle{
+  display: none !important;
+}
+
+.grey-text > b, .grey-text > li > b {
+  color: #777777;
+}

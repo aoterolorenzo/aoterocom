@@ -1,4 +1,4 @@
-<div class="modal show" id="bitcoin-modal" tabindex="-1" role="dialog" style="padding-left: 0;">
+<div class="modal show" id="bitcoin-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog wide" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
@@ -10,13 +10,13 @@
       <div class="modal-body text-center" >
         <div class="row don-row">
 
-          <div class="col-2 col-md-1" style="padding: 9px 12px;border: 1px solid #dddddd;margin:  0;align-items:  right;align-content: right;">
-              <span style="align-self: right;">
+          <div class="col-2 col-md-1 icon-col">
+              <span class="crypto-icon">
                 <i class="fab fa-bitcoin"></i>
               </span>
           </div>
-          <div class="col-10 col-md-11" style="padding: 10px 0;margin: 0;background-color: #dddddd;height: 100%;width: 100%;">
-            <div style="height:  100%;width: 100%;">
+          <div class="col-10 col-md-11 address-col">
+            <div class="address-ln">
               <span id="bitcoin-address">{{bitcoinWallet}}</span>
             </div>
           </div>
@@ -24,7 +24,7 @@
 
         <div class="row">
 
-          <button id="btc-copy-button" style="margin: auto;box-shadow:  none;padding: 0.74rem 1.64rem" type="button" class="btn sticky-bottom blue darken-ao waves-light"
+          <button id="btc-copy-button" type="button" class="btn sticky-bottom blue darken-ao waves-light"
                   (click)="copyWalletAddress()" translate mdbWavesEffect>
             <i class="fas fa-clipboard"></i> <span translate> Copiar</span>
           </button>

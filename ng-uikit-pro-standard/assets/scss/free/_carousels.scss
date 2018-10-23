@@ -7,9 +7,13 @@
   }
   .carousel-control-prev-icon {
     background-image: $carousel-control-prev-icon;
+    background-color: #555;
+    border-radius: 50%;
   }
   .carousel-control-next-icon {
     background-image: $carousel-control-next-icon;
+    background-color: #555;
+    border-radius: 50%;
   }
   .carousel-indicators {
     li {
