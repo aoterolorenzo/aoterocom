@@ -74,8 +74,8 @@
   "cloud1": "Ofrecíamos <b>+50Gb de almacenamiento en la nube</b> a cada socio en nuestro Owncloud (un CMS del estilo de Dropbox/GDrive/OneDrive). Teníamos también ciertas carpetas comunes accesibles a todos los socios con una cuota de espacio muy superior, donde podían compartir contenidos y descargas entre ellos (todo lo que se descargaba de nuestro utorrent iba a parar a ellas)",
   "cloud2": "Nuestro owncloud también fue <b>modificado por mi, añadiéndole al mismo un sistema de streaming (Subsonic)</b> donde los miembros podían ver cualquier contenido multimedia tanto de su nube como de las carpetas comunes a través del portal. Como he mencionado antes, también proveíamos un servidor uTorrent con su correspondiente webgui multiusuario, para descargar contenidos p2p directamente a las carpetas comunes.",
 
-  "This is a": "Esto es un",
-  "project": "proyecto",
+  "This is a": "Esto es",
+  "project": "",
   "withapi": "Con una <b>API con DJango REST API</b>",
   "internalstats": "Usa <b>estadísticas</b> proveídas diariamente y en directo por la API de mysportsfeeds.com",
   "frontend": "El frontend está pensado para hacerse en <b>Vue.js o React</b> (actualmente solo está desarrollado el backend)",
