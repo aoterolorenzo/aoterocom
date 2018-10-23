@@ -36,6 +36,11 @@ app.use(express.static(path.join(__dirname, '/dist/aoterocom')));
 // routers
 app.use('/api/v1/resume', resumeRouter);
 
+// Send all other requests to the Angular app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/aoterocom/index.html'));
+});
+
 
 app.listen(port, () => {
   console.log(`aotero backend server listen on port ${port}`);

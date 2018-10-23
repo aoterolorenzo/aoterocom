@@ -25,6 +25,8 @@ const appRoutes: Routes = [
   {
     path: 'projects/rianxosencabos', component: RianxosencabosComponent
   },
+  { path: '**',
+    redirectTo: '/'}
 
 ];
 
