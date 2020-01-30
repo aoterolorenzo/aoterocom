@@ -17,7 +17,8 @@ mongoose.connect('mongodb://localhost:27017/aoterocom', { useNewUrlParser: true 
 // middleware
 app.use(function(req,res,next) {
   let schema = (req.headers['x-forwarded-proto'] || '').toLowerCase();
-  if (req.headers.host.indexOf('localhost')<0 && schema!=='https') {
+  //req.headers.host.indexOf('localhost')<0 && 
+  if (schema!=='https') {
     res.redirect('https://aotero.com/');
   } else {
     next();
