@@ -47,7 +47,7 @@
     "http-status": "^1.2.0",
     "jarallax": "^1.10.3",
     "jquery": "^3.3.1",
-    "mongoose": "^5.2.6",
+    "mongoose": "^5.7.5",
     "ng-html-util": "1.0.x",
     "rxjs": "^6.0.0",
     "screenfull": "3.3.x",
