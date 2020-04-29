@@ -46,7 +46,7 @@
     "hammerjs": "2.0.x",
     "http-status": "^1.2.0",
     "jarallax": "^1.10.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "mongoose": "^5.2.6",
     "ng-html-util": "1.0.x",
     "rxjs": "^6.0.0",
