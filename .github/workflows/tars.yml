@@ -1,0 +1,13 @@
+name: Add Readme
+
+env:
+  PROYECT_TITLE: ${{ PROYECT_TITLE }}
+
+jobs:
+  steps:
+    - name: "Create README file"
+      run:
+        echo "# ${{ env.PROYECT_TITLE }}" > A_README.md
+    - name: "Say goodbye"
+      run:
+        echo "Goodbye :)"
