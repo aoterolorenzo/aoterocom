@@ -1,0 +1,28 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  TARS:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - run: |
+          rm package.json
+          ls
+          git diff
+
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: |
+          git diff
+          git config user.name "${{ secrets.GIT_USERNAME }}"
+          git config user.email "${{ secrets.GIT_AUTHOR_EMAIL }}"
+          git add .
+          git commit -m "tars: apply action"
+          git push --no-verify -u origin HEAD
+          gh pr create --base master \
+            --title 'TARS ACTION' \
+            --body "**Automated Pull Request**"
