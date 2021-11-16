@@ -34,7 +34,7 @@
     "amazon-cognito-identity-js": "^2.0.23",
     "angular-particle": "^1.0.4",
     "angular-webstorage-service": "^1.0.2",
-    "aws-sdk": "^2.306.0",
+    "aws-sdk": "^2.814.0",
     "bluebird": "^3.5.1",
     "body-parser": "latest",
     "chart.js": "2.5.x",
